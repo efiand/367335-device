@@ -6,16 +6,94 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header container">
+    <h1 class="visuallyhidden">Device</h1>
     <a class="page-header__logo logo">
       <svg class="logo__img" width="167px" height="36px">
         <use xlink:href="img/logo.svg#logo" x="0" y="0"/>
       </svg>
     </a>
+    <form class="page-header__search search" action="https://yandex.ru/search/" method="get" target="_blank">
+      <p>
+        <label class="visuallyhidden" for="search-field">Поиск по сайту</label>
+        <input class="search__field" id="search-field" name="text" type="search" placeholder="Поиск по сайту">
+      </p>
+      <button class="search__btn" type="submit">
+        <span class="visuallyhidden">Найти</span>
+      </button>
+    </form>
+    <nav class="page-header__options options">
+      <ul class="options__menu options__menu--user">
+        <li class="options__item">
+          <a class="options__link options__link--login" href="#">Войти</a>
+        </li>
+      </ul>
+      <ul class="options__menu">
+        <li class="options__item">
+          <a class="options__link options__link--compare" href="#">Сравнить</a>
+        </li>
+        <li class="options__item">
+          <a class="options__link options__link--basket" href="#">Корзина</a>
+        </li>
+      </ul>
+    </nav>
+    <nav class="page-header__nav nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a href="catalog.html" class="nav__link">Каталог товаров</a>
+          <a href="#categories"><span class="visuallyhidden">Показать категории</span></a>
+          <ul class="categories" id="categories">
+            <li class="categories__item">
+              <a class="categories__link" href="catalog.html#">Виртуальная реальность</a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="catalog.html#">Моноподы для селфи</a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="catalog.html#">Экшн-камеры</a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="catalog.html#">Фитнес-браслеты</a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="catalog.html#">Умные часы</a>
+            </li>
+            <li class="categories__item">
+              <a class="categories__link" href="catalog.html#">Квадрокоптеры</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item nav__item--catalog">
+          <a href="" class="nav__link">Доставка</a>
+        </li>
+        <li class="nav__item">
+          <a href="" class="nav__link">Гарантия</a>
+        </li>
+        <li class="nav__item nav__item--contacts">
+          <a href="" class="nav__link">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <section class="page-header__promo promo">
+      <h2 class="visuallyhidden">Промо</h2>
+      <nav>
+        <ul class="promo__nav nav-promo">
+          <li class="nav-promo__item">
+            <a class="nav-promo__link" href="#promo-slide-1"><span class="visuallyhidden">Слайд 1</span></a>
+          </li>
+          <li class="nav-promo__item">
+            <a class="nav-promo__link" href="#promo-slide-2"><span class="visuallyhidden">Слайд 2</span></a>
+          </li>
+          <li class="nav-promo__item">
+            <a class="nav-promo__link" href="#promo-slide-3"><span class="visuallyhidden">Слайд 3</span></a>
+          </li>
+        </ul>
+      </nav>
+    </section>
   </header>
-  <main class="page-main">
+  <main>
   </main>
-  <footer class="page-header">
+  <footer class="page-footer">
     <a class="page-footer__logo logo">
       <svg class="logo__img logo__img--footer" width="167px" height="36px">
         <use xlink:href="img/logo.svg#logo-footer" x="0" y="0"/>
