@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header class="page-header container">
+  <header class="page-header">
     <a class="page-header__logo logo">
       <img class="logo__img" src="img/logo.svg" width="167" height="36" alt="Логотип Device">
     </a>
@@ -22,9 +22,11 @@
       </button>
     </form>
     <ul class="page-header__options options-menu">
-      <li class="options-menu__item options-menu__item--profile">
+      <li class="options-menu__item">
         <a class="options-menu__link options-menu__link--profile" href="#">Войти</a>
       </li>
+    </ul>
+    <ul class="page-header__options options-menu">
       <li class="options-menu__item">
         <a class="options-menu__link options-menu__link--compare" href="#">Сравнить</a>
       </li>
@@ -37,26 +39,32 @@
         <li class="nav__item">
           <a href="#" class="nav__link">Каталог товаров</a>
           <a href="#categories"><span class="visuallyhidden">Показать категории</span></a>
-          <ul class="categories-cat" id="categories">
-            <li class="categories-cat__item">
-              <a class="categories-cat__link" href="#">Виртуальная реальность</a>
-            </li>
-            <li class="categories-cat__item">
-              <a class="categories-cat__link" href="catalog.html">Моноподы для селфи</a>
-            </li>
-            <li class="categories-cat__item">
-              <a class="categories-cat__link" href="#">Экшн-камеры</a>
-            </li>
-            <li class="categories-cat__item">
-              <a class="categories-cat__link" href="#">Фитнес-браслеты</a>
-            </li>
-            <li class="categories-cat__item">
-              <a class="categories-cat__link" href="#">Умные часы</a>
-            </li>
-            <li class="categories-cat__item">
-              <a class="categories-cat__link" href="#">Квадрокоптеры</a>
-            </li>
-          </ul>
+          <div class="categories-cat" id="categories">
+            <ul class="categories-cat__list">
+              <li class="categories-cat__item">
+                <a class="categories-cat__link" href="#">Виртуальная реальность</a>
+              </li>
+              <li class="categories-cat__item">
+                <a class="categories-cat__link categories-cat__link--current" href="catalog.html">Моноподы для селфи</a>
+              </li>
+              <li class="categories-cat__item">
+                <a class="categories-cat__link" href="#">Экшн-камеры</a>
+              </li>
+            </ul>
+            <ul class="categories-cat__list">
+              <li class="categories-cat__item">
+                <a class="categories-cat__link" href="#">Фитнес-браслеты</a>
+              </li>
+              <li class="categories-cat__item">
+                <a class="categories-cat__link" href="#">Умные часы</a>
+              </li>
+            </ul>
+            <ul class="categories-cat__list">
+              <li class="categories-cat__item">
+                <a class="categories-cat__link" href="#">Квадрокоптеры</a>
+              </li>
+            </ul>
+          </div>
         </li>
         <li class="nav__item nav__item--catalog">
           <a href="#" class="nav__link">Доставка</a>
@@ -69,31 +77,29 @@
         </li>
       </ul>
     </nav>
-    <h1 class="visuallyhidden">Device</h1>
   </header>
   <main>
-    <section class="promo container">
+    <h1 class="visuallyhidden">Device</h1>
+    <section class="promo">
       <h2 class="visuallyhidden">Промо</h2>
-      <nav>
-        <ul class="promo__nav nav-promo">
-          <li class="nav-promo__item">
-            <a class="nav-promo__link" href="#promo-slide-1"><span class="visuallyhidden">Слайд 1</span></a>
-          </li>
-          <li class="nav-promo__item">
-            <a class="nav-promo__link" href="#promo-slide-2"><span class="visuallyhidden">Слайд 2</span></a>
-          </li>
-          <li class="nav-promo__item">
-            <a class="nav-promo__link" href="#promo-slide-3"><span class="visuallyhidden">Слайд 3</span></a>
-          </li>
-        </ul>
-      </nav>
+      <ul class="promo__nav nav-promo">
+        <li class="nav-promo__item">
+          <a class="nav-promo__link" href="#promo-slide-1"><span class="visuallyhidden">Слайд 1</span></a>
+        </li>
+        <li class="nav-promo__item">
+          <a class="nav-promo__link" href="#promo-slide-2"><span class="visuallyhidden">Слайд 2</span></a>
+        </li>
+        <li class="nav-promo__item">
+          <a class="nav-promo__link" href="#promo-slide-3"><span class="visuallyhidden">Слайд 3</span></a>
+        </li>
+      </ul>
       <ol class="promo__slides slides-promo">
         <li class="slides-promo__item" id="#promo-slide-1">
           <h3 class="slides-promo__title">
             <span class="visuallyhidden">Слайд 1</span>
           </h3>
           <img src="img/slider-1.png" width="384" height="486" alt="Промо-фото 1">
-          <p class="slides-promo__lead title">Делай селфи, как Бен Стиллер!</p>
+          <p class="slides-promo__lead">Делай селфи, как Бен Стиллер!</p>
           <p class="slides-promo__descr">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
           <a class="slides-promo__link" href="#">Подробнее</a>
           <table class="promo__properties properties-promo">
@@ -116,7 +122,7 @@
             <span class="visuallyhidden">Слайд 2</span>
           </h3>
           <img src="img/slider-2.png" width="345" height="485" alt="Промо-фото 2">
-          <p class="slides-promo__lead title">Худеем правильно!</p>
+          <p class="slides-promo__lead">Худеем правильно!</p>
           <p class="slides-promo__descr"></p>
           <a class="slides-promo__link" href="#">Подробнее</a>
           <table class="promo__properties properties-promo">
@@ -135,7 +141,7 @@
             <span class="visuallyhidden">Слайд 3</span>
           </h3>
           <img src="img/slider-3.png" width="526" height="334" alt="Промо-фото 3">
-          <p class="slides-promo__lead title">Порхает как бабочка, жалит как пчела!</p>
+          <p class="slides-promo__lead">Порхает как бабочка, жалит как пчела!</p>
           <p class="slides-promo__descr">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
           <a class="slides-promo__link" href="#">Подробнее</a>
           <table class="promo__properties properties-promo">
@@ -175,26 +181,26 @@
     </section>
     <section class="services">
       <h2 class="visuallyhidden">Сервисы</h2>
-      <dl class="services__list container">
+      <dl class="services__list">
         <dt class="services__cat">
           <a class="services__link services__link--1 btn" id="service-1" href="#service-1">Доставка</a>
         </dt>
         <dd class="services__content service">
-          <h3 class="service__title title">Доставка</h3>
+          <h3 class="service__title">Доставка</h3>
           <p class="service__descr">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
         </dd>
         <dt class="services__cat">
           <a class="services__link services__link--2 btn" id="service-2" href="#service-2">Гарантия</a>
         </dt>
         <dd class="services__content service">
-          <h3 class="service__title title">Гарантия</h3>
+          <h3 class="service__title">Гарантия</h3>
           <p class="service__descr">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
         </dd>
         <dt class="services__cat">
           <a class="services__link services__link--3 btn" id="service-3" href="#service-3">Кредит</a>
         </dt>
         <dd class="services__content service">
-          <h3 class="service__title title">Кредит</h3>
+          <h3 class="service__title">Кредит</h3>
           <p class="service__descr">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
         </dd>
       </dl>
@@ -225,7 +231,7 @@
       </ul>
     </section>
     <section class="about">
-      <h2 class="about__title title">О нас</h2>
+      <h2 class="about__title">О нас</h2>
       <p class="about__descr">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
       <p class="about__descr">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
       <ul class="about__list partners-about">
@@ -242,7 +248,7 @@
       <a class="about__link btn" href="#" target="_blank">Подробнее о нас</a>
     </section>
     <section class="about contacts" id="contacts">
-      <h2 class="about__title title">Контакты</h2>
+      <h2 class="about__title">Контакты</h2>
       <p class="about__descr">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
       <a class="contacts__map-link" href="#map">
         <span class="visuallyhidden">Адрес на карте</span>
@@ -283,6 +289,8 @@
       <li class="options-menu__item">
         <a class="options-menu__link options-menu__link--footer options-menu__link--profile" href="#">Войти</a>
       </li>
+    </ul>
+    <ul class="page-header__options options-menu">
       <li class="options-menu__item">
         <a class="options-menu__link options-menu__link--footer options-menu__link--compare" href="#">Сравнить</a>
       </li>
@@ -290,7 +298,7 @@
         <a class="options-menu__link options-menu__link--footer options-menu__link--basket" href="#">Корзина</a>
       </li>
     </ul>
-    <a class="page-footer__address" href="#map" title="Показать на карте">г. Москва, ул. Строителей, 15</a>
+    <p class="page-footer__address">г. Москва, ул. Строителей, 15</p>
     <ul class="page-footer__services services-footer">
       <li class="services-footer__item">
         <a href="#">Доставка</a>
