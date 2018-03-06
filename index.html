@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Девайс</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
   <header class="page-header">
@@ -31,7 +31,7 @@
         <a class="options-menu__link options-menu__link--compare" href="#">Сравнить</a>
       </li>
       <li class="options-menu__item">
-        <a class="options-menu__link options-menu__link--basket" href="#">Корзина</a>
+        <a class="options-menu__link options-menu__link--cart" href="#">Корзина</a>
       </li>
     </ul>
     <nav class="page-header__nav nav">
@@ -185,21 +185,21 @@
         <dt class="services__cat">
           <a class="services__link services__link--1 btn" id="service-1" href="#service-1">Доставка</a>
         </dt>
-        <dd class="services__content service">
+        <dd class="services__content service service--delivery">
           <h3 class="service__title">Доставка</h3>
           <p class="service__descr">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
         </dd>
         <dt class="services__cat">
           <a class="services__link services__link--2 btn" id="service-2" href="#service-2">Гарантия</a>
         </dt>
-        <dd class="services__content service">
+        <dd class="services__content service service--warranty">
           <h3 class="service__title">Гарантия</h3>
           <p class="service__descr">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
         </dd>
         <dt class="services__cat">
           <a class="services__link services__link--3 btn" id="service-3" href="#service-3">Кредит</a>
         </dt>
-        <dd class="services__content service">
+        <dd class="services__content service service--credit">
           <h3 class="service__title">Кредит</h3>
           <p class="service__descr">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
         </dd>
@@ -295,7 +295,7 @@
         <a class="options-menu__link options-menu__link--footer options-menu__link--compare" href="#">Сравнить</a>
       </li>
       <li class="options-menu__item">
-        <a class="options-menu__link options-menu__link--footer options-menu__link--basket" href="#">Корзина</a>
+        <a class="options-menu__link options-menu__link--footer options-menu__link--cart" href="#">Корзина</a>
       </li>
     </ul>
     <p class="page-footer__address">г. Москва, ул. Строителей, 15</p>
@@ -318,12 +318,12 @@
         </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--" href="#" title="Мы в Instagram">
+        <a class="socials__link socials__link--instagram" href="#" title="Мы в Instagram">
           <span class="visuallyhidden">Instagram</span>
         </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--" href="#" title="Мы в Twitter">
+        <a class="socials__link socials__link--twitter" href="#" title="Мы в Twitter">
           <span class="visuallyhidden">Twitter</span>
         </a>
       </li>
@@ -332,6 +332,6 @@
       <img class="dev__logo" src="img/logo-dev.svg" width="27" height="34" alt="Логотип HTML Academy">
     </a>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>

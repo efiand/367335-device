@@ -1,5 +1,6 @@
 .DS_Store
 .idea
+.stylelintrc
 *.ai
 *.log
 *.pdf
