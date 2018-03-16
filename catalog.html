@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header" id="menu-cat">
     <a class="page-header__logo logo" href="index.html">
       <img class="logo__img" src="img/logo.svg" width="167" height="36" alt="Логотип Device">
     </a>
@@ -41,8 +41,9 @@
       <ul class="nav__list">
         <li class="nav__item">
           <a href="catalog.html" class="nav__link">Каталог товаров</a>
-          <a href="#categories"><span class="visuallyhidden">Показать категории</span></a>
-          <div class="categories-cat" id="categories">
+          <a class="nav__spoiler-btn nav__spoiler-btn--on" href="#menu-cat">Показать категории</a>
+          <a class="nav__spoiler-btn nav__spoiler-btn--off" href="#">Скрыть категории</a>
+          <div class="categories-cat">
             <ul class="categories-cat__list">
               <li class="categories-cat__item">
                 <a class="categories-cat__link" href="#">Виртуальная реальность</a>
@@ -95,11 +96,11 @@
       </li>
     </ul>
     <section class="catalog__sect filter">
-      <header class="catalog-sect__header">
-        <h2 class="catalog-sect__title">Фильтр</h2>
+      <header class="catalog__header filter__header">
+        <h2 class="catalog__subtitle">Фильтр</h2>
       </header>
       <form class="filter__form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="filter__cat cat-filter">
+        <fieldset class="filter__cat cat-filter cat-filter--cost">
           <legend class="cat-filter__title">Стоимость</legend>
           <div class="range">
             <div class="range__value"></div>
@@ -152,13 +153,13 @@
         <button class="filter__btn btn" type="submit">Показать</button>
       </form>
     </section>
-    <section class="catalog__offers offers">
+    <section class="catalog__sect offers">
       <h2 class="visuallyhidden">Товары</h2>
-      <header class="catalog-sect__header catalog-sect__header--offers">
-        <h2 class="catalog-sect__title">Сортировка</h2>
+      <header class="catalog__header offers__header">
+        <h2 class="catalog__subtitle">Сортировка</h2>
         <ul class="sort">
           <li class="sort__item">
-            <a class="sort__link" href="#">По цене</a>
+            <a class="sort__link sort__link--current" href="#">По цене</a>
           </li>
           <li class="sort__item">
             <a class="sort__link" href="#">По типу</a>
@@ -167,85 +168,81 @@
             <a class="sort__link" href="#">По популярности</a>
           </li>
         </ul>
-        <ul class="sort">
-          <li class="sort__item">
-            <a class="sort__link sort__link--order sort__link--order-asc" href="#">
-              <span class="visuallyhidden">По возрастанию</span>
-            </a>
+        <ul class="sort sort--order">
+          <li class="sort__item sort__item--order">
+            <a class="sort__link sort__link--order sort__link--order-asc" href="#">По возрастанию</a>
           </li>
-          <li class="sort__item">
-            <a class="sort__link sort__link--order sort__link--order-desc" href="#">
-              <span class="visuallyhidden">По убыванию</span>
-            </a>
+          <li class="sort__item sort__item--order">
+            <a class="sort__link sort__link--current sort__link--order sort__link--order-desc" href="#">По убыванию</a>
           </li>
         </ul>
       </header>
       <ul class="offers__list">
         <li class="offers__item">
           <article class="offer">
+            <ul class="offer__options options-offer">
+              <li class="options-offer__item">
+                <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
+              </li>
+              <li class="options-offer__item">
+                <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
+              </li>
+            </ul>
             <img class="offer__img" src="img/offer-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
             <h1 class="offer__title">Любительская селфи-палка</h1>
             <p class="offer__price">500 руб.</p>
-            <ul class="offer__options options-offer">
-              <li class="options-offer__item">
-                <a class="options-offer__choose btn" href="#">В корзину</a>
-              </li>
-              <li class="options-offer__item">
-                <a class="options-offer__compare" href="#">Добавить к сравнению</a>
-              </li>
-            </ul>
           </article>
         </li>
         <li class="offers__item">
           <article class="offer">
+            <ul class="offer__options options-offer">
+              <li class="options-offer__item">
+                <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
+              </li>
+              <li class="options-offer__item">
+                <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
+              </li>
+            </ul>
             <img class="offer__img" src="img/offer-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
             <h1 class="offer__title">Профессиональная селфи-палка</h1>
             <p class="offer__price">1500 руб.</p>
-            <ul class="offer__options options-offer">
-              <li class="options-offer__item">
-                <a class="options-offer__choose btn" href="#">В корзину</a>
-              </li>
-              <li class="options-offer__item">
-                <a class="options-offer__compare" href="#">Добавить к сравнению</a>
-              </li>
-            </ul>
           </article>
         </li>
         <li class="offers__item">
           <article class="offer">
+            <ul class="offer__options options-offer">
+              <li class="options-offer__item">
+                <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
+              </li>
+              <li class="options-offer__item">
+                <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
+              </li>
+            </ul>
             <img class="offer__img" src="img/offer-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
             <h1 class="offer__title">Непотопляемая селфи-палка</h1>
             <p class="offer__price">2500 руб.</p>
-            <ul class="offer__options options-offer">
-              <li class="options-offer__item">
-                <a class="options-offer__choose btn" href="#">В корзину</a>
-              </li>
-              <li class="options-offer__item">
-                <a class="options-offer__compare" href="#">Добавить к сравнению</a>
-              </li>
-            </ul>
           </article>
         </li>
         <li class="offers__item">
           <article class="offer">
+            <ul class="offer__options options-offer">
+              <li class="options-offer__item">
+                <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
+              </li>
+              <li class="options-offer__item">
+                <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
+              </li>
+            </ul>
             <img class="offer__img" src="img/offer-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
             <h1 class="offer__title">Селфи-палка «Следуй за мной»</h1>
             <p class="offer__price">4900 руб.</p>
             <p class="offer__new-tag">New</p>
-            <ul class="offer__options options-offer">
-              <li class="options-offer__item">
-                <a class="options-offer__choose btn" href="#">В корзину</a>
-              </li>
-              <li class="options-offer__item">
-                <a class="options-offer__compare" href="#">Добавить к сравнению</a>
-              </li>
-            </ul>
           </article>
         </li>
       </ul>
       <footer class="offers__footer">
         <ul class="pagination">
-          <li class="pagination__item">
+          <li class="pagination__item pagination__item--prev">
             <a class="pagination__link pagination__link--prev" href="#">Назад</a>
           </li>
           <li class="pagination__item">
@@ -257,7 +254,7 @@
           <li class="pagination__item">
             <a class="pagination__link" href="#">3</a>
           </li>
-          <li class="pagination__item">
+          <li class="pagination__item pagination__item--next">
             <a class="pagination__link pagination__link--next" href="#">Вперёд</a>
           </li>
         </ul>
