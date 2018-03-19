@@ -10,16 +10,14 @@
 <body>
   <header class="page-header" id="menu-cat">
     <a class="page-header__logo logo">
-      <img class="logo__img" src="img/logo.svg" width="167" height="36" alt="Логотип Device">
+      <img class="logo__img" src="img/logo.svg" width="164" height="36" alt="Логотип Device">
     </a>
     <form class="page-header__search search" action="https://yandex.ru/search/" method="get" target="_blank">
-      <p>
-        <label class="visuallyhidden" for="search-field">Поиск по сайту</label>
-        <input class="search__field" id="search-field" name="text" type="search" placeholder="Поиск по сайту">
-      </p>
-      <button class="search__btn visuallyhidden" type="submit">Найти</button>
+      <label class="visuallyhidden" for="search-field">Поиск по сайту</label>
+      <input class="search__field" id="search-field" name="text" type="search" placeholder="Поиск по сайту">
+      <button class="search__btn" type="submit">Найти</button>
     </form>
-    <ul class="page-header__options options-menu">
+    <ul class="page-header__options options-menu options-menu--profile">
       <li class="options-menu__item">
         <a class="options-menu__link options-menu__link--profile" href="#">Войти</a>
       </li>
@@ -34,7 +32,7 @@
     </ul>
     <nav class="page-header__nav nav">
       <ul class="nav__list">
-        <li class="nav__item">
+        <li class="nav__item nav__item--catalog">
           <a href="#" class="nav__link">Каталог товаров</a>
           <a class="nav__spoiler-btn nav__spoiler-btn--on" href="#menu-cat">Показать категории</a>
           <a class="nav__spoiler-btn nav__spoiler-btn--off" href="#">Скрыть категории</a>
@@ -65,7 +63,7 @@
             </ul>
           </div>
         </li>
-        <li class="nav__item nav__item--catalog">
+        <li class="nav__item">
           <a href="#" class="nav__link">Доставка</a>
         </li>
         <li class="nav__item">
@@ -97,9 +95,11 @@
           <h3 class="slides-promo__title">
             <span class="visuallyhidden">Слайд 2</span>
           </h3>
-          <img src="img/slider-2.png" width="345" height="485" alt="Промо-фото 2">
-          <p class="slides-promo__lead">Худеем правильно!</p>
-          <p class="slides-promo__descr">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+          <img class="slides-promo__img slides-promo__img--2" src="img/slider-2.png" width="345" height="485" alt="Промо-фото 2">
+          <p class="slides-promo__lead">Худеем<br>
+          правильно!</p>
+          <p class="slides-promo__descr">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
+          не пропускать занятия и соблюдать диету.</p>
           <a class="slides-promo__link btn" href="#">Подробнее</a>
           <table class="promo__properties properties-promo">
             <tr class="properties-promo__string properties-promo__string--values">
@@ -116,9 +116,10 @@
           <h3 class="slides-promo__title">
             <span class="visuallyhidden">Слайд 3</span>
           </h3>
-          <img src="img/slider-3.png" width="526" height="334" alt="Промо-фото 3">
+          <img class="slides-promo__img slides-promo__img--3" src="img/slider-3.png" width="526" height="334" alt="Промо-фото 3">
           <p class="slides-promo__lead">Порхает как бабочка, жалит как пчела!</p>
-          <p class="slides-promo__descr">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+          <p class="slides-promo__descr">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным<br>
+          лазером, замаскированным под стандартную камеру.</p>
           <a class="slides-promo__link btn" href="#">Подробнее</a>
           <table class="promo__properties properties-promo">
             <tr class="properties-promo__string properties-promo__string--values">
@@ -137,21 +138,23 @@
           <h3 class="slides-promo__title">
             <span class="visuallyhidden">Слайд 1</span>
           </h3>
-          <img src="img/slider-1.png" width="384" height="486" alt="Промо-фото 1">
-          <p class="slides-promo__lead">Делай селфи, как Бен Стиллер!</p>
-          <p class="slides-promo__descr">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+          <img class="slides-promo__img slides-promo__img--1" src="img/slider-1.png" width="384" height="486" alt="Промо-фото 1">
+          <p class="slides-promo__lead">Делай селфи,<br>
+          как Бен Стиллер!</p>
+          <p class="slides-promo__descr">Самая длинная палка для селфи доступна в нашем магазине.<br>
+          Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
           <a class="slides-promo__link btn" href="#">Подробнее</a>
           <table class="promo__properties properties-promo">
             <tr class="properties-promo__string properties-promo__string--values">
               <td class="visuallyhidden">Значение</td>
               <td class="properties-promo__value">8,5 м</td>
-              <td class="properties-promo__value">5 кг</td>
+              <td class="properties-promo__value properties-promo__value--weight">5 кг</td>
               <td class="properties-promo__value">Карбон</td>
             </tr>
             <tr class="properties-promo__string">
               <th class="visuallyhidden">Параметр</th>
               <th class="properties-promo__property">Длина палки</th>
-              <th class="properties-promo__property">Вес палки</th>
+              <th class="properties-promo__property properties-promo__property--weight">Вес палки</th>
               <th class="properties-promo__property">Материал</th>
             </tr>
           </table>
@@ -258,7 +261,7 @@
         <form class="contacts__feedback feedback" id="feedback" action="https://echo.htmlacademy.ru" target="_blank" method="post">
           <p class="feedback__item">
             <label class="feedback__param" for="name">Ваше имя:</label>
-            <input class="feedback__field" id="name" name="name" type="text" placeholder="Имя фамилия" required>
+            <input class="feedback__field" id="name" name="name" type="text" placeholder="Имя фамилия" pattern="[А-Я]{1}[а-я]+ [А-Я]{1}[а-я]+">
           </p>
           <p class="feedback__item">
             <label class="feedback__param" for="email">Ваш e-mail:</label>
@@ -277,14 +280,14 @@
   </main>
   <footer class="page-footer">
     <a class="page-footer__logo logo">
-      <img class="logo__img logo__img--footer" src="img/logo-footer.svg" width="167" height="36" alt="Логотип Device">
+      <img class="logo__img" src="img/logo-footer.svg" width="164" height="36" alt="Логотип Device">
     </a>
-    <ul class="page-footer__options options-menu">
+    <ul class="page-footer__options page-footer__options--profile options-menu">
       <li class="options-menu__item">
         <a class="options-menu__link options-menu__link--footer options-menu__link--profile" href="#">Войти</a>
       </li>
     </ul>
-    <ul class="page-footer__options page-footer__options--services options-menu">
+    <ul class="page-footer__options options-menu">
       <li class="options-menu__item">
         <a class="options-menu__link options-menu__link--footer options-menu__link--compare" href="#">Сравнить</a>
       </li>
@@ -304,7 +307,7 @@
         <a href="#">Контакты</a>
       </li>
     </ul>
-    <a class="page-footer__tel" href="tel:+74954959595" title="Позвонить">Тел.: +7(495)495-95-95</a>
+    <a class="page-footer__tel" href="tel:+74954959595" title="Позвонить">Тел.: +7 (495) 495-95-95</a>
     <ul class="page-footer__socials socials">
       <li class="socials__item">
         <a class="socials__link socials__link--fb" href="#" title="Мы в Facebook">Facebook</a>

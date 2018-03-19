@@ -8,25 +8,21 @@
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-  <header class="page-header" id="menu-cat">
+  <header class="page-header page-header--catalog" id="menu-cat">
     <a class="page-header__logo logo" href="index.html">
-      <img class="logo__img" src="img/logo.svg" width="167" height="36" alt="Логотип Device">
+      <img class="logo__img" src="img/logo.svg" width="164" height="36" alt="Логотип Device">
     </a>
     <form class="page-header__search search" action="https://yandex.ru/search/" method="get" target="_blank">
-      <p>
-        <label class="visuallyhidden" for="search-field">Поиск по сайту</label>
-        <input class="search__field" id="search-field" name="text" type="search" placeholder="Поиск по сайту">
-      </p>
-      <button class="search__btn" type="submit">
-        <span class="visuallyhidden">Найти</span>
-      </button>
+      <label class="visuallyhidden" for="search-field">Поиск по сайту</label>
+      <input class="search__field" id="search-field" name="text" type="search" placeholder="Поиск по сайту">
+      <button class="search__btn" type="submit">Найти</button>
     </form>
-    <ul class="page-header__options options-menu profile-menu">
+    <ul class="page-header__options options-menu options-menu--profile">
       <li class="options-menu__item">
         <a class="options-menu__link options-menu__link--profile" href="#">Валентин Петухов</a>
       </li>
       <li class="options-menu__item">
-        <a class="options-menu__link profile-menu__logout-link" href="#">Выйти</a>
+        <a class="options-menu__link options-menu__logout-link" href="#">Выйти</a>
       </li>
     </ul>
     <ul class="page-header__options options-menu">
@@ -39,8 +35,8 @@
     </ul>
     <nav class="page-header__nav nav">
       <ul class="nav__list">
-        <li class="nav__item">
-          <a href="catalog.html" class="nav__link">Каталог товаров</a>
+        <li class="nav__item nav__item--catalog">
+          <a href="#" class="nav__link">Каталог товаров</a>
           <a class="nav__spoiler-btn nav__spoiler-btn--on" href="#menu-cat">Показать категории</a>
           <a class="nav__spoiler-btn nav__spoiler-btn--off" href="#">Скрыть категории</a>
           <div class="categories-cat">
@@ -70,7 +66,7 @@
             </ul>
           </div>
         </li>
-        <li class="nav__item nav__item--catalog">
+        <li class="nav__item">
           <a href="#" class="nav__link">Доставка</a>
         </li>
         <li class="nav__item">
@@ -262,18 +258,18 @@
     </section>
   </main>
   <footer class="page-footer">
-    <a class="page-footer__logo logo">
-      <img class="logo__img logo__img--footer" src="img/logo-footer.svg" width="167" height="36" alt="Логотип Device">
+    <a class="page-footer__logo logo" href="index.html">
+      <img class="logo__img" src="img/logo-footer.svg" width="164" height="36" alt="Логотип Device">
     </a>
-    <ul class="page-footer__options options-menu profile-menu">
+    <ul class="page-footer__options page-footer__options--profile options-menu">
       <li class="options-menu__item">
-        <a class="options-menu__link options-menu__link--profile" href="#">Валентин Петухов</a>
+        <a class="options-menu__link options-menu__link--footer options-menu__link--profile" href="#">Валентин Петухов</a>
       </li>
       <li class="options-menu__item">
-        <a class="options-menu__link profile-menu__logout-link" href="#">Выйти</a>
+        <a class="options-menu__link options-menu__logout-link" href="#">Выйти</a>
       </li>
     </ul>
-    <ul class="page-header__options options-menu">
+    <ul class="page-footer__options options-menu">
       <li class="options-menu__item">
         <a class="options-menu__link options-menu__link--footer options-menu__link--compare" href="#">Сравнить</a>
       </li>
@@ -293,22 +289,16 @@
         <a href="#">Контакты</a>
       </li>
     </ul>
-    <a class="page-footer__tel" href="tel:+74954959595" title="Позвонить">Тел.: +7(495)495-95-95</a>
+    <a class="page-footer__tel" href="tel:+74954959595" title="Позвонить">Тел.: +7 (495) 495-95-95</a>
     <ul class="page-footer__socials socials">
       <li class="socials__item">
-        <a class="socials__link socials__link--fb" href="#" title="Мы в Facebook">
-          <span class="visuallyhidden">Facebook</span>
-        </a>
+        <a class="socials__link socials__link--fb" href="#" title="Мы в Facebook">Facebook</a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--instagram" href="#" title="Мы в Instagram">
-          <span class="visuallyhidden">Instagram</span>
-        </a>
+        <a class="socials__link socials__link--instagram" href="#" title="Мы в Instagram">Instagram</a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--twitter" href="#" title="Мы в Twitter">
-          <span class="visuallyhidden">Twitter</span>
-        </a>
+        <a class="socials__link socials__link--twitter" href="#" title="Мы в Twitter">Twitter</a>
       </li>
     </ul>
     <a class="page-footer__dev dev" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank" title="Сделано на интенсиве «Профессиональный HTML и CSS, уровень 1»">
