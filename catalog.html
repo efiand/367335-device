@@ -98,52 +98,52 @@
       <form class="filter__form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="filter__cat cat-filter cat-filter--cost">
           <legend class="cat-filter__title">Стоимость</legend>
-          <div class="range">
-            <div class="range__value"></div>
-            <div class="range__min"></div>
-            <div class="range__max"></div>
-          </div>
-          <p class="cat-filter__opt choose-cost choose-cost--min">
-            <label class="choose-cost__param choose-cost__param--min" for="min-price">от</label>
-            <input class="choose-cost__field choose-cost__field--min" id="min-price" type="number" min="0" max="8500" step="170" value="0">
-          </p>
-          <p class="cat-filter__opt choose-cost choose-cost--max">
-            <label class="choose-cost__param choose-cost__param--max" for="max-price">до</label>
-            <input class="choose-cost__field choose-cost__field--max" id="max-price" type="number" min="0" max="8500" step="170" value="5000">
+          <p class="choose-cost">
+            <span class="choose-cost__range"></span>
+            <span class="choose-cost__group choose-cost__group--min">
+              от
+              <input class="choose-cost__field choose-cost__field--min" id="min-price" type="number" min="0" max="8500" step="170" value="0">
+              <label class="choose-cost__point choose-cost__point--min" for="min-price">Минимальное значение</label>
+            </span>
+            <span class="choose-cost__group choose-cost__group--max">
+              до
+              <input class="choose-cost__field choose-cost__field--max" id="max-price" type="number" min="0" max="8500" step="170" value="5000">
+              <label class="choose-cost__point choose-cost__point--max" for="max-price">Максимальное значение</label>
+            </span>
           </p>
         </fieldset>
         <fieldset class="filter__cat cat-filter">
           <legend class="cat-filter__title">Цвет</legend>
           <p class="cat-filter__opt choose-color">
-            <input class="visuallyhidden choose-color__value choose-color__value--1" id="color-1" name="colors[]" type="checkbox" value="1" checked>
+            <input class="visuallyhidden choose-color__value" id="color-1" name="colors[]" type="checkbox" value="1" checked>
             <label class="choose-color__param" for="color-1">Черный</label>
           </p>
           <p class="cat-filter__opt choose-color">
-            <input class="visuallyhidden choose-color__value choose-color__value--2" id="color-2" name="colors[]" type="checkbox" value="2">
+            <input class="visuallyhidden choose-color__value" id="color-2" name="colors[]" type="checkbox" value="2">
             <label class="choose-color__param" for="color-2">Белый</label>
           </p>
           <p class="cat-filter__opt choose-color">
-            <input class="visuallyhidden choose-color__value choose-color__value--3" id="color-3" name="colors[]" type="checkbox" value="3" checked>
+            <input class="visuallyhidden choose-color__value" id="color-3" name="colors[]" type="checkbox" value="3" checked>
             <label class="choose-color__param" for="color-3">Синий</label>
           </p>
           <p class="cat-filter__opt choose-color">
-            <input class="visuallyhidden choose-color__value choose-color__value--4" id="color-4" name="colors[]" type="checkbox" value="4" checked>
+            <input class="visuallyhidden choose-color__value" id="color-4" name="colors[]" type="checkbox" value="4" checked>
             <label class="choose-color__param" for="color-4">Красный</label>
           </p>
           <p class="cat-filter__opt choose-color">
-            <input class="visuallyhidden choose-color__value choose-color__value--5" id="color-5" name="colors[]" type="checkbox" value="5">
-            <label class="choose-color__param" for="color-5"></label>
+            <input class="visuallyhidden choose-color__value" id="color-5" name="colors[]" type="checkbox" value="5" disabled>
+            <label class="choose-color__param" for="color-5">Розовый</label>
           </p>
         </fieldset>
         <fieldset class="filter__cat cat-filter">
           <legend class="cat-filter__title">Bluetooth</legend>
           <p class="cat-filter__opt choose-bt">
-            <input class="visuallyhidden choose-bt__value choose-bt__value--1" id="bt-1" name="bluetooth" type="radio" value="1" checked>
+            <input class="visuallyhidden choose-bt__value" id="bt-1" name="bluetooth" type="radio" value="1" checked>
             <label class="choose-bt__param choose-bt__param--1" for="bt-1">Есть</label>
           </p>
           <p class="cat-filter__opt choose-bt">
-            <input class="visuallyhidden choose-bt__value choose-bt__value--0" id="bt-0" name="bluetooth" type="radio" value="0" checked>
-            <label class="choose-bt__param choose-bt__param--0" for="bt-0">Есть</label>
+            <input class="visuallyhidden choose-bt__value" id="bt-0" name="bluetooth" type="radio" value="0" checked>
+            <label class="choose-bt__param choose-bt__param--0" for="bt-0">Нет</label>
           </p>
         </fieldset>
         <button class="filter__btn btn" type="submit">Показать</button>
@@ -155,7 +155,7 @@
         <h2 class="catalog__subtitle">Сортировка</h2>
         <ul class="sort">
           <li class="sort__item">
-            <a class="sort__link sort__link--current" href="#">По цене</a>
+            <a class="sort__link">По цене</a>
           </li>
           <li class="sort__item">
             <a class="sort__link" href="#">По типу</a>
@@ -169,7 +169,7 @@
             <a class="sort__link sort__link--order sort__link--order-asc" href="#">По возрастанию</a>
           </li>
           <li class="sort__item sort__item--order">
-            <a class="sort__link sort__link--current sort__link--order sort__link--order-desc" href="#">По убыванию</a>
+            <a class="sort__link sort__link--order sort__link--order-desc">По убыванию</a>
           </li>
         </ul>
       </header>
@@ -200,8 +200,9 @@
               </li>
             </ul>
             <img class="offer__img" src="img/offer-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-            <h1 class="offer__title">Профессиональная селфи-палка</h1>
-            <p class="offer__price">1500 руб.</p>
+            <h1 class="offer__title">Профессиональная<br>
+            селфи-палка</h1>
+            <p class="offer__price">1 500 руб.</p>
           </article>
         </li>
         <li class="offers__item">
@@ -216,7 +217,7 @@
             </ul>
             <img class="offer__img" src="img/offer-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
             <h1 class="offer__title">Непотопляемая селфи-палка</h1>
-            <p class="offer__price">2500 руб.</p>
+            <p class="offer__price">2 500 руб.</p>
           </article>
         </li>
         <li class="offers__item">
@@ -231,7 +232,7 @@
             </ul>
             <img class="offer__img" src="img/offer-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
             <h1 class="offer__title">Селфи-палка «Следуй за мной»</h1>
-            <p class="offer__price">4900 руб.</p>
+            <p class="offer__price">4 900 руб.</p>
             <p class="offer__new-tag">New</p>
           </article>
         </li>
@@ -242,7 +243,7 @@
             <a class="pagination__link pagination__link--prev" href="#">Назад</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link pagination__link--current">1</a>
+            <a class="pagination__link">1</a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#">2</a>
@@ -251,7 +252,7 @@
             <a class="pagination__link" href="#">3</a>
           </li>
           <li class="pagination__item pagination__item--next">
-            <a class="pagination__link pagination__link--next" href="#">Вперёд</a>
+            <a class="pagination__link pagination__link--next" href="#">Вперед</a>
           </li>
         </ul>
       </footer>
