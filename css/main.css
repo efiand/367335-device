@@ -1437,10 +1437,10 @@ a {
   position: absolute;
   top: -2px;
   left: -1px;
-  width: 19px;
-  height: 19px;
-  border: solid 2px #000000;
-  border-radius: 3px;
+  width: 27px;
+  height: 23px;
+  background-image: url("../img/icons/checkbox-off.svg");
+  background-repeat: no-repeat;
 }
 
 .choose-color__param:hover::before,
@@ -1448,23 +1448,17 @@ a {
   opacity: 0.6;
 }
 
-.choose-color__value:active + .choose-color__param::before {
+.choose-color__value:active:not(:disabled) + .choose-color__param::before {
   opacity: 1;
 }
 
 .choose-color__value:checked + .choose-color__param::before,
-.choose-color__value:active + .choose-color__param::before {
-  width: 26px;
-  height: 23px;
+.choose-color__value:active:not(:disabled) + .choose-color__param::before {
   background-image: url("../img/icons/checkbox-on.svg");
-  border: none;
 }
 
-.choose-color__value:checked:active + .choose-color__param::before {
-  width: 19px;
-  height: 19px;
-  background-image: none;
-  border: solid 2px #000000;
+.choose-color__value:checked:active:not(:disabled) + .choose-color__param::before {
+  background-image: url("../img/icons/checkbox-off.svg");
 }
 
 .choose-color__value:disabled + .choose-color__param {
@@ -1521,13 +1515,13 @@ a {
   opacity: 0.6;
 }
 
-.choose-bt__value:active + .choose-bt__param::before,
-.choose-bt__value:active + .choose-bt__param::after {
+.choose-bt__value:active:not(:disabled) + .choose-bt__param::before,
+.choose-bt__value:active:not(:disabled) + .choose-bt__param::after {
   opacity: 1;
 }
 
 .choose-bt__value:checked + .choose-bt__param::after,
-.choose-bt__value:active + .choose-bt__param::after {
+.choose-bt__value:active:not(:disabled) + .choose-bt__param::after {
   content: "";
 }
 
