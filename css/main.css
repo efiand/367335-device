@@ -128,6 +128,9 @@ a {
   padding: 8px 20px 7px 40px;
   font: inherit;
   background-color: transparent;
+  background-image: url("../img/icons/search.svg");
+  background-repeat: no-repeat;
+  background-position: 3px 16px;
   border: none;
   outline: none;
   -webkit-appearance: none;
@@ -237,24 +240,86 @@ a {
   opacity: 0.3;
 }
 
+.options-menu__link--profile {
+  background-image: url("../img/icons/profile.svg");
+  background-repeat: no-repeat;
+  background-position: 2px 4px;
+}
+
+.options-menu__link--compare {
+  background-image: url("../img/icons/compare.svg");
+  background-repeat: no-repeat;
+  background-position: 7px 6px;
+}
+
+.options-menu__link--cart {
+  background-image: url("../img/icons/cart.svg");
+  background-repeat: no-repeat;
+  background-position: 3px 4px;
+}
+
 .options-menu__link--footer {
-  margin-left: 36px;
-  opacity: 0.7;
+  position: relative;
+  margin-left: 37px;
+  color: rgba(255, 255, 255, 0.7);
+  background-image: none;
+}
+
+.options-menu__link--footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 36px;
 }
 
 .options-menu__link--footer:hover,
 .options-menu__link--footer:focus {
+  color: #ffffff;
   opacity: 1;
 }
 
+.options-menu__link--footer:hover::before,
+.options-menu__link--footer:focus::before {
+  opacity: 0.6;
+}
+
 .options-menu__link--footer:active {
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.options-menu__link--footer:active::before {
+  opacity: 0.6;
+}
+
+.options-menu__link--footer-profile::before {
+  background-image: url("../img/icons/profile-footer.svg");
+  background-repeat: no-repeat;
+  background-position: 0 4px;
+}
+
+.options-menu__link--footer-compare::before {
+  background-image: url("../img/icons/compare-footer.svg");
+  background-repeat: no-repeat;
+  background-position: 7px 6px;
+}
+
+.options-menu__link--footer-cart::before {
+  background-image: url("../img/icons/cart-footer.svg");
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
 }
 
 .options-menu__logout-link {
   margin-left: 0;
   padding-left: 23px;
   opacity: 0.3;
+}
+
+.options-menu__logout-link-footer {
+  padding-left: 19px;
 }
 
 .nav {
@@ -617,9 +682,19 @@ a {
 }
 
 .categories__link {
+  position: relative;
   display: block;
   padding-top: 193px;
   background-image: linear-gradient(#f7e296 160px, transparent 160px);
+}
+
+.categories__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
 }
 
 .categories__link:hover,
@@ -634,6 +709,42 @@ a {
 
 .categories__link:active::before {
   opacity: 0.3;
+}
+
+.categories__link--1::before {
+  background-image: url("../img/icons/category-1.svg");
+  background-repeat: no-repeat;
+  background-position: 31px 52px;
+}
+
+.categories__link--2::before {
+  background-image: url("../img/icons/category-2.svg");
+  background-repeat: no-repeat;
+  background-position: 38px 41px;
+}
+
+.categories__link--3::before {
+  background-image: url("../img/icons/category-3.svg");
+  background-repeat: no-repeat;
+  background-position: 49px 38px;
+}
+
+.categories__link--4::before {
+  background-image: url("../img/icons/category-4.svg");
+  background-repeat: no-repeat;
+  background-position: 28px 50px;
+}
+
+.categories__link--5::before {
+  background-image: url("../img/icons/category-5.svg");
+  background-repeat: no-repeat;
+  background-position: 55px 32px;
+}
+
+.categories__link--6::before {
+  background-image: url("../img/icons/category-6.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 49px;
 }
 
 .services {
@@ -653,11 +764,11 @@ a {
 }
 
 .services__cat--warranty {
-  top: 145px;
+  top: 144px;
 }
 
 .services__cat--credit {
-  top: 210px;
+  top: 209px;
 }
 
 .services__link {
@@ -707,7 +818,23 @@ a {
 }
 
 .service {
-  padding: 73px 330px 78px 115px;
+  padding: 73px 320px 78px 115px;
+  background-repeat: no-repeat;
+}
+
+.service--delivery {
+  background-image: url("../img/icons/service-delivery.svg");
+  background-position: right 66px top 85px;
+}
+
+.service--warranty {
+  background-image: url("../img/icons/service-warranty.svg");
+  background-position: right 46px top 61px;
+}
+
+.service--credit {
+  background-image: url("../img/icons/service-credit.svg");
+  background-position: right 70px top 61px;
 }
 
 .service__title {
@@ -909,6 +1036,7 @@ a {
   height: 222px;
   margin-top: 38px;
   margin-bottom: 69px;
+  background-color: #ebe8e7;
 }
 
 .contacts__map-link::before {
@@ -1320,8 +1448,23 @@ a {
   opacity: 0.6;
 }
 
-.choose-color__value:checked + .choose-color__param::before {
+.choose-color__value:active + .choose-color__param::before {
+  opacity: 1;
+}
+
+.choose-color__value:checked + .choose-color__param::before,
+.choose-color__value:active + .choose-color__param::before {
+  width: 26px;
+  height: 23px;
+  background-image: url("../img/icons/checkbox-on.svg");
   border: none;
+}
+
+.choose-color__value:checked:active + .choose-color__param::before {
+  width: 19px;
+  height: 19px;
+  background-image: none;
+  border: solid 2px #000000;
 }
 
 .choose-color__value:disabled + .choose-color__param {
@@ -1378,7 +1521,13 @@ a {
   opacity: 0.6;
 }
 
-.choose-bt__value:checked + .choose-bt__param::after {
+.choose-bt__value:active + .choose-bt__param::before,
+.choose-bt__value:active + .choose-bt__param::after {
+  opacity: 1;
+}
+
+.choose-bt__value:checked + .choose-bt__param::after,
+.choose-bt__value:active + .choose-bt__param::after {
   content: "";
 }
 
@@ -1816,11 +1965,29 @@ a {
 }
 
 .socials__item {
-  margin: 30px 11px;
+  margin: 29px 11px;
 }
 
 .socials__link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  text-indent: 100000px;
+  white-space: nowrap;
   opacity: 0.3;
+}
+
+.socials__link--fb {
+  background-image: url("../img/icons/socials-fb.svg");
+}
+
+.socials__link--instagram {
+  background-image: url("../img/icons/socials-instagram.svg");
+}
+
+.socials__link--twitter {
+  background-image: url("../img/icons/socials-twitter.svg");
 }
 
 .socials__link:hover,
@@ -1830,6 +1997,10 @@ a {
 
 .socials__link:active {
   opacity: 0.1;
+}
+
+.dev {
+  margin-top: 8px;
 }
 
 .dev:hover,
