@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-  <header class="page-header" id="menu-cat">
+  <header class="page-header">
     <a class="page-header__logo logo">
       <img class="logo__img" src="img/logo.svg" width="164" height="36" alt="Логотип Device">
     </a>
@@ -36,8 +36,8 @@
       <ul class="nav__list">
         <li class="nav__item nav__item--catalog">
           <a href="#" class="nav__link">Каталог товаров</a>
-          <a class="nav__spoiler-btn nav__spoiler-btn--on" href="#menu-cat">Показать категории</a>
-          <a class="nav__spoiler-btn nav__spoiler-btn--off" href="#">Скрыть категории</a>
+          <button class="nav__spoiler-btn nav__spoiler-btn--on" type="button" disabled>Показать категории</button>
+          <button class="nav__spoiler-btn nav__spoiler-btn--off" type="button">Скрыть категории</button>
           <div class="categories-cat">
             <ul class="categories-cat__list">
               <li class="categories-cat__item">
@@ -81,62 +81,14 @@
     <h1 class="visuallyhidden">Device</h1>
     <section class="promo">
       <h2 class="visuallyhidden">Промо</h2>
-      <ul class="promo__nav nav-promo">
-        <li class="nav-promo__item">
-          <a class="nav-promo__link" href="#promo-1">Слайд 1</a>
-        </li>
-        <li class="nav-promo__item">
-          <a class="nav-promo__link" href="#promo-2">Слайд 2</a>
-        </li>
-        <li class="nav-promo__item">
-          <a class="nav-promo__link" href="#promo-3">Слайд 3</a>
-        </li>
-      </ul>
+      <input class="promo__toggler promo__toggler--1 visuallyhidden" id="promo-toggler-1" type="radio" name="promo" value="1" checked>
+      <label class="promo__label promo__label--1" for="promo-toggler-1">Слайд 1</label>
+      <input class="promo__toggler promo__toggler--2 visuallyhidden" id="promo-toggler-2" type="radio" name="promo" value="2">
+      <label class="promo__label promo__label--2" for="promo-toggler-2">Слайд 2</label>
+      <input class="promo__toggler promo__toggler--3 visuallyhidden" id="promo-toggler-3" type="radio" name="promo" value="3">
+      <label class="promo__label promo__label--3" for="promo-toggler-3">Слайд 3</label>
       <ol class="promo__slides slides-promo">
-        <li class="slides-promo__item slides-promo__item--2" id="promo-2">
-          <h3 class="slides-promo__title">
-            <span class="visuallyhidden">Слайд 2</span>
-          </h3>
-          <img class="slides-promo__img slides-promo__img--2" src="img/slider-2.png" width="345" height="485" alt="Промо-фото 2">
-          <p class="slides-promo__lead">Худеем<br>
-          правильно!</p>
-          <p class="slides-promo__descr">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
-          не пропускать занятия и соблюдать диету.</p>
-          <a class="slides-promo__link btn" href="#">Подробнее</a>
-          <table class="promo__properties properties-promo">
-            <tr class="properties-promo__string properties-promo__string--values">
-              <td class="visuallyhidden">Значение</td>
-              <td class="properties-promo__value">48 часов</td>
-            </tr>
-            <tr class="properties-promo__string">
-              <th class="visuallyhidden">Параметр</th>
-              <th class="properties-promo__property">Без подзарядки</th>
-            </tr>
-          </table>
-        </li>
-        <li class="slides-promo__item slides-promo__item--3" id="promo-3">
-          <h3 class="slides-promo__title">
-            <span class="visuallyhidden">Слайд 3</span>
-          </h3>
-          <img class="slides-promo__img slides-promo__img--3" src="img/slider-3.png" width="526" height="334" alt="Промо-фото 3">
-          <p class="slides-promo__lead">Порхает как бабочка, жалит как пчела!</p>
-          <p class="slides-promo__descr">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным<br>
-          лазером, замаскированным под стандартную камеру.</p>
-          <a class="slides-promo__link btn" href="#">Подробнее</a>
-          <table class="promo__properties properties-promo">
-            <tr class="properties-promo__string properties-promo__string--values">
-              <td class="visuallyhidden">Значение</td>
-              <td class="properties-promo__value">800 м</td>
-              <td class="properties-promo__value">50 м</td>
-            </tr>
-            <tr class="properties-promo__string">
-              <th class="visuallyhidden">Параметр</th>
-              <th class="properties-promo__property">Дальность полета</th>
-              <th class="properties-promo__property">Радиус поражения</th>
-            </tr>
-          </table>
-        </li>
-        <li class="slides-promo__item slides-promo__item--1" id="promo-1">
+        <li class="slides-promo__item slides-promo__item--1">
           <h3 class="slides-promo__title">
             <span class="visuallyhidden">Слайд 1</span>
           </h3>
@@ -158,6 +110,49 @@
               <th class="properties-promo__property">Длина палки</th>
               <th class="properties-promo__property properties-promo__property--weight">Вес палки</th>
               <th class="properties-promo__property">Материал</th>
+            </tr>
+          </table>
+        </li>
+        <li class="slides-promo__item slides-promo__item--2">
+          <h3 class="slides-promo__title">
+            <span class="visuallyhidden">Слайд 2</span>
+          </h3>
+          <img class="slides-promo__img slides-promo__img--2" src="img/slider-2.png" width="345" height="485" alt="Промо-фото 2">
+          <p class="slides-promo__lead">Худеем<br>
+          правильно!</p>
+          <p class="slides-promo__descr">Мотивирующие фитнес-браслеты помогут найти в себе силы<br>
+          не пропускать занятия и соблюдать диету.</p>
+          <a class="slides-promo__link btn" href="#">Подробнее</a>
+          <table class="promo__properties properties-promo">
+            <tr class="properties-promo__string properties-promo__string--values">
+              <td class="visuallyhidden">Значение</td>
+              <td class="properties-promo__value">48 часов</td>
+            </tr>
+            <tr class="properties-promo__string">
+              <th class="visuallyhidden">Параметр</th>
+              <th class="properties-promo__property">Без подзарядки</th>
+            </tr>
+          </table>
+        </li>
+        <li class="slides-promo__item slides-promo__item--3">
+          <h3 class="slides-promo__title">
+            <span class="visuallyhidden">Слайд 3</span>
+          </h3>
+          <img class="slides-promo__img slides-promo__img--3" src="img/slider-3.png" width="526" height="334" alt="Промо-фото 3">
+          <p class="slides-promo__lead">Порхает как бабочка, жалит как пчела!</p>
+          <p class="slides-promo__descr">Этот обычный, на первый взгляд, квадрокоптер оснащен<br>
+          мощным лазером, замаскированным под стандартную камеру.</p>
+          <a class="slides-promo__link btn" href="#">Подробнее</a>
+          <table class="promo__properties properties-promo">
+            <tr class="properties-promo__string properties-promo__string--values">
+              <td class="visuallyhidden">Значение</td>
+              <td class="properties-promo__value">800 м</td>
+              <td class="properties-promo__value">50 м</td>
+            </tr>
+            <tr class="properties-promo__string">
+              <th class="visuallyhidden">Параметр</th>
+              <th class="properties-promo__property">Дальность полета</th>
+              <th class="properties-promo__property">Радиус поражения</th>
             </tr>
           </table>
         </li>
