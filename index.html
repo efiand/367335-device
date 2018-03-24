@@ -12,24 +12,26 @@
     <a class="page-header__logo logo">
       <img class="logo__img" src="img/logo.svg" width="164" height="36" alt="Логотип Device">
     </a>
-    <form class="page-header__search search" action="https://yandex.ru/search/" method="get" target="_blank">
-      <label class="visuallyhidden" for="search-field">Поиск по сайту</label>
-      <input class="search__field" id="search-field" name="text" type="search" placeholder="Поиск по сайту">
-      <button class="search__btn" type="submit">Найти</button>
-    </form>
-    <ul class="page-header__options options-menu options-menu--profile">
-      <li class="options-menu__item">
-        <a class="options-menu__link options-menu__link--profile" href="#">Войти</a>
-      </li>
-    </ul>
-    <ul class="page-header__options options-menu">
-      <li class="options-menu__item">
-        <a class="options-menu__link options-menu__link--compare" href="#">Сравнить</a>
-      </li>
-      <li class="options-menu__item">
-        <a class="options-menu__link options-menu__link--cart" href="#">Корзина</a>
-      </li>
-    </ul>
+    <div class="page-header__group">
+      <form class="page-header__search search" action="https://yandex.ru/search/" method="get" target="_blank">
+        <label class="visuallyhidden" for="search-field">Поиск по сайту</label>
+        <input class="search__field" id="search-field" name="text" type="search" placeholder="Поиск по сайту">
+        <button class="search__btn" type="submit">Найти</button>
+      </form>
+      <ul class="page-header__options options-menu options-menu--profile">
+        <li class="options-menu__item">
+          <a class="options-menu__link options-menu__link--profile" href="#">Войти</a>
+        </li>
+      </ul>
+      <ul class="page-header__options options-menu">
+        <li class="options-menu__item">
+          <a class="options-menu__link options-menu__link--compare" href="#">Сравнить</a>
+        </li>
+        <li class="options-menu__item">
+          <a class="options-menu__link options-menu__link--cart" href="#">Корзина</a>
+        </li>
+      </ul>
+    </div>
     <nav class="page-header__nav nav">
       <ul class="nav__list">
         <li class="nav__item nav__item--catalog">
@@ -232,12 +234,12 @@
         </li>
       </ul>
     </section>
-    <div class="about">
-      <section class="about__item">
-        <h2 class="about__title">О нас</h2>
-        <p class="about__descr">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p class="about__descr">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul class="about__list partners-about">
+    <div class="info">
+      <section class="info__item about">
+        <h2 class="info__title">О нас</h2>
+        <p class="info__descr">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p class="info__descr">Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <ul class="partners-about">
           <li class="partners-about__item">
             <a class="partners-about__link" href="#" target="_blank">Деловые Линии</a>
           </li>
@@ -248,18 +250,18 @@
             <a class="partners-about__link" href="#" target="_blank">ЖелДорЭкспедиция</a>
           </li>
         </ul>
-        <a class="about__link btn" href="#" target="_blank">Подробнее о нас</a>
+        <a class="info__link btn" href="#" target="_blank">Подробнее о нас</a>
       </section>
-      <section class="about__item contacts" id="contacts">
-        <h2 class="about__title">Контакты</h2>
-        <p class="about__descr about__descr--contacts">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a class="contacts__map-link" href="#map">Адрес на карте</a>
-        <figure class="contacts__map map" id="map">
-          <figcaption class="visuallyhidden">Карта с адресом</figcaption>
-          <img class="map__img" src="img/map-popup.png" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
-          <a class="contacts__close" href="#contacts">Назад к тексту</a>
-        </figure>
-        <a class="about__link btn" href="#feedback">Напишите нам</a>
+      <section class="info__item contacts" id="contacts">
+        <h2 class="info__title">Контакты</h2>
+        <p class="info__descr info__descr--contacts">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <a class="contacts__map-link" href="#">
+          <img src="img/map-pic.png" width="560" height="222" alt="Адрес на карте: г. Москва, ул. Строителей, 15">
+        </a>
+        <div class="map" id="map">
+          <button class="contacts__close contacts__close--map" type="button">Назад к тексту</button>
+        </div>
+        <a class="info__link info__link--feedback btn" href="#feedback">Напишите нам</a>
         <form class="contacts__feedback feedback" id="feedback" action="https://echo.htmlacademy.ru" target="_blank" method="post">
           <p class="feedback__item">
             <label class="feedback__param" for="name">Ваше имя:</label>
@@ -274,8 +276,7 @@
             <textarea class="feedback__field feedback__field--textarea" id="text" name="text" placeholder="В свободной форме" required></textarea>
           </p>
           <button class="feedback__submit btn" type="submit">Отправить</button>
-          <a class="contacts__close" href="#contacts" title="Закрыть">Назад к тексту
-          </a>
+          <a class="contacts__close contacts__close--feedback" href="#contacts">Назад к тексту</a>
         </form>
       </section>
     </div>

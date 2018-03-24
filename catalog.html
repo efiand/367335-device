@@ -12,27 +12,29 @@
     <a class="page-header__logo logo" href="index.html">
       <img class="logo__img" src="img/logo.svg" width="164" height="36" alt="Логотип Device">
     </a>
-    <form class="page-header__search search" action="https://yandex.ru/search/" method="get" target="_blank">
-      <label class="visuallyhidden" for="search-field">Поиск по сайту</label>
-      <input class="search__field" id="search-field" name="text" type="search" placeholder="Поиск по сайту">
-      <button class="search__btn" type="submit">Найти</button>
-    </form>
-    <ul class="page-header__options options-menu options-menu--profile">
-      <li class="options-menu__item">
-        <a class="options-menu__link options-menu__link--profile" href="#">Валентин Петухов</a>
-      </li>
-      <li class="options-menu__item">
-        <a class="options-menu__link options-menu__logout-link" href="#">Выйти</a>
-      </li>
-    </ul>
-    <ul class="page-header__options options-menu">
-      <li class="options-menu__item">
-        <a class="options-menu__link options-menu__link--compare" href="#">Сравнить</a>
-      </li>
-      <li class="options-menu__item">
-        <a class="options-menu__link options-menu__link--cart" href="#">Корзина</a>
-      </li>
-    </ul>
+    <div class="page-header__group">
+      <form class="page-header__search search" action="https://yandex.ru/search/" method="get" target="_blank">
+        <label class="visuallyhidden" for="search-field">Поиск по сайту</label>
+        <input class="search__field" id="search-field" name="text" type="search" placeholder="Поиск по сайту">
+        <button class="search__btn" type="submit">Найти</button>
+      </form>
+      <ul class="page-header__options options-menu options-menu--profile">
+        <li class="options-menu__item">
+          <a class="options-menu__link options-menu__link--profile" href="#">Валентин Петухов</a>
+        </li>
+        <li class="options-menu__item">
+          <a class="options-menu__link options-menu__logout-link" href="#">Выйти</a>
+        </li>
+      </ul>
+      <ul class="page-header__options options-menu">
+        <li class="options-menu__item">
+          <a class="options-menu__link options-menu__link--compare" href="#">Сравнить</a>
+        </li>
+        <li class="options-menu__item">
+          <a class="options-menu__link options-menu__link--cart" href="#">Корзина</a>
+        </li>
+      </ul>
+    </div>
     <nav class="page-header__nav nav">
       <ul class="nav__list">
         <li class="nav__item nav__item--catalog">
@@ -100,16 +102,16 @@
           <legend class="cat-filter__title">Стоимость</legend>
           <p class="choose-cost">
             <span class="choose-cost__range"></span>
-            <span class="choose-cost__group choose-cost__group--min">
+              <button class="choose-cost__point choose-cost__point--min" for="min-price">Минимальное значение</button>
+              <button class="choose-cost__point choose-cost__point--max" for="max-price">Максимальное значение</button>
+            <label class="choose-cost__group choose-cost__group--min">
               от
-              <input class="choose-cost__field choose-cost__field--min" id="min-price" type="number" min="0" max="8500" step="170" value="0">
-              <label class="choose-cost__point choose-cost__point--min" for="min-price">Минимальное значение</label>
-            </span>
-            <span class="choose-cost__group choose-cost__group--max">
+              <input class="choose-cost__field choose-cost__field--min" type="number" min="0" max="8500" step="170" value="0">
+            </label>
+            <label class="choose-cost__group choose-cost__group--max">
               до
               <input class="choose-cost__field choose-cost__field--max" id="max-price" type="number" min="0" max="8500" step="170" value="5000">
-              <label class="choose-cost__point choose-cost__point--max" for="max-price">Максимальное значение</label>
-            </span>
+            </label>
           </p>
         </fieldset>
         <fieldset class="filter__cat cat-filter">
