@@ -102,8 +102,8 @@
           <legend class="cat-filter__title">Стоимость</legend>
           <p class="choose-cost">
             <span class="choose-cost__range"></span>
-            <button class="choose-cost__point choose-cost__point--min" for="min-price">Минимальное значение</button>
-            <button class="choose-cost__point choose-cost__point--max" for="max-price">Максимальное значение</button>
+            <button class="choose-cost__point choose-cost__point--min" type="button">Минимальное значение</button>
+            <button class="choose-cost__point choose-cost__point--max" type="button">Максимальное значение</button>
             <label class="choose-cost__group choose-cost__group--min">
               от
               <input class="choose-cost__field choose-cost__field--min" type="number" min="0" max="8500" step="170" value="0">
@@ -152,7 +152,6 @@
       </form>
     </section>
     <section class="catalog__sect offers">
-      <h2 class="visuallyhidden">Товары</h2>
       <header class="catalog__header offers__header">
         <h2 class="catalog__subtitle">Сортировка</h2>
         <ul class="sort">
@@ -176,67 +175,59 @@
         </ul>
       </header>
       <ul class="offers__list">
-        <li class="offers__item">
-          <article class="offer">
-            <ul class="offer__options options-offer">
-              <li class="options-offer__item">
-                <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
-              </li>
-              <li class="options-offer__item">
-                <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
-              </li>
-            </ul>
-            <img class="offer__img" src="img/offer-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
-            <h1 class="offer__title">Любительская селфи-палка</h1>
-            <p class="offer__price">500 руб.</p>
-          </article>
+        <li class="offers__item offer">
+          <ul class="offer__options options-offer">
+            <li class="options-offer__item">
+              <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
+            </li>
+            <li class="options-offer__item">
+              <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
+            </li>
+          </ul>
+          <img class="offer__img" src="img/offer-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+          <h2 class="offer__title">Любительская селфи-палка</h2>
+          <p class="offer__price">500 руб.</p>
         </li>
-        <li class="offers__item">
-          <article class="offer">
-            <ul class="offer__options options-offer">
-              <li class="options-offer__item">
-                <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
-              </li>
-              <li class="options-offer__item">
-                <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
-              </li>
-            </ul>
-            <img class="offer__img" src="img/offer-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-            <h1 class="offer__title">Профессиональная<br>
-            селфи-палка</h1>
-            <p class="offer__price">1 500 руб.</p>
-          </article>
+        <li class="offers__item offer">
+          <ul class="offer__options options-offer">
+            <li class="options-offer__item">
+              <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
+            </li>
+            <li class="options-offer__item">
+              <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
+            </li>
+          </ul>
+          <img class="offer__img" src="img/offer-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+          <h2 class="offer__title">Профессиональная<br>
+          селфи-палка</h2>
+          <p class="offer__price">1 500 руб.</p>
         </li>
-        <li class="offers__item">
-          <article class="offer">
-            <ul class="offer__options options-offer">
-              <li class="options-offer__item">
-                <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
-              </li>
-              <li class="options-offer__item">
-                <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
-              </li>
-            </ul>
-            <img class="offer__img" src="img/offer-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-            <h1 class="offer__title">Непотопляемая селфи-палка</h1>
-            <p class="offer__price">2 500 руб.</p>
-          </article>
+        <li class="offers__item offer">
+          <ul class="offer__options options-offer">
+            <li class="options-offer__item">
+              <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
+            </li>
+            <li class="options-offer__item">
+              <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
+            </li>
+          </ul>
+          <img class="offer__img" src="img/offer-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+          <h2 class="offer__title">Непотопляемая селфи-палка</h2>
+          <p class="offer__price">2 500 руб.</p>
         </li>
-        <li class="offers__item">
-          <article class="offer">
-            <ul class="offer__options options-offer">
-              <li class="options-offer__item">
-                <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
-              </li>
-              <li class="options-offer__item">
-                <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
-              </li>
-            </ul>
-            <img class="offer__img" src="img/offer-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
-            <h1 class="offer__title">Селфи-палка «Следуй за мной»</h1>
-            <p class="offer__price">4 900 руб.</p>
-            <p class="offer__new-tag">New</p>
-          </article>
+        <li class="offers__item offer">
+          <ul class="offer__options options-offer">
+            <li class="options-offer__item">
+              <a class="options-offer__link options-offer__choose btn" href="#">В корзину</a>
+            </li>
+            <li class="options-offer__item">
+              <a class="options-offer__link options-offer__compare" href="#">Добавить к сравнению</a>
+            </li>
+          </ul>
+          <img class="offer__img" src="img/offer-4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
+          <h2 class="offer__title">Селфи-палка «Следуй за мной»</h2>
+          <p class="offer__price">4 900 руб.</p>
+          <p class="offer__new-tag">New</p>
         </li>
       </ul>
       <footer class="offers__footer">
@@ -264,8 +255,7 @@
     <a class="page-footer__logo logo" href="index.html">
       <img class="logo__img" src="img/logo-footer.svg" width="164" height="36" alt="Логотип Device">
     </a>
-    <section class="page-footer__group page-footer__group--options">
-      <h2 class="visuallyhidden">Опции</h2>
+    <div class="page-footer__group page-footer__group--options">
       <ul class="page-footer__options page-footer__options--profile options-menu">
         <li class="options-menu__item">
           <a class="options-menu__link options-menu__link--footer options-menu__link--profile options-menu__link--footer-profile" href="#">Валентин Петухов</a>
@@ -282,9 +272,8 @@
           <a class="options-menu__link options-menu__link--footer options-menu__link--cart options-menu__link--footer-cart" href="#">Корзина</a>
         </li>
       </ul>
-    </section>
-    <section class="page-footer__group">
-      <h2 class="visuallyhidden">Контакты</h2>
+    </div>
+    <div class="page-footer__group">
       <p class="page-footer__address">г. Москва, ул. Строителей, 15</p>
       <ul class="page-footer__services services-footer">
         <li class="services-footer__item">
@@ -298,7 +287,7 @@
         </li>
       </ul>
       <a class="page-footer__tel" href="tel:+74954959595" title="Позвонить">Тел.: +7 (495) 495-95-95</a>
-    </section>
+    </div>
     <ul class="page-footer__socials socials">
       <li class="socials__item">
         <a class="socials__link socials__link--fb" href="#" title="Мы в Facebook">Facebook</a>
