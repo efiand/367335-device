@@ -180,29 +180,28 @@
     </ul>
     <section class="services">
       <h2 class="visuallyhidden">Сервисы</h2>
-      <div class="services__content service service--credit" id="service-credit">
-        <h3 class="service__title">Кредит</h3>
-        <p class="service__descr">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>
-        условия кредита. Выгодные для нашего банка, разумеется.</p>
-      </div>
-      <div class="services__cat services__cat--credit">
-        <a class="services__link services__link--credit btn" href="#service-credit">Кредит</a>
-      </div>
-      <div class="services__content service service--warranty" id="service-warranty">
-        <h3 class="service__title">Гарантия</h3>
-        <p class="service__descr">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
-        Товар, не дом, конечно же.</p>
-      </div>
-      <div class="services__cat services__cat--warranty">
-        <a class="services__link services__link--warranty btn" href="#service-warranty">Гарантия</a>
-      </div>
-      <div class="services__content service service--delivery" id="service-delivery">
-        <h3 class="service__title">Доставка</h3>
-        <p class="service__descr">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-      </div>
-      <div class="services__cat services__cat--delivery">
-        <a class="services__link services__link--delivery btn" href="#service-delivery">Доставка</a>
-      </div>
+      <input class="services__toggler services__toggler--1 visuallyhidden" id="services-toggler-1" type="radio" name="services" value="1" checked>
+      <label class="services__label services__label--1 btn" for="services-toggler-1">Доставка</label>
+      <input class="services__toggler services__toggler--2 visuallyhidden" id="services-toggler-2" type="radio" name="services" value="2">
+      <label class="services__label services__label--2 btn" for="services-toggler-2">Гарантия</label>
+      <input class="services__toggler services__toggler--3 visuallyhidden" id="services-toggler-3" type="radio" name="services" value="3">
+      <label class="services__label services__label--3 btn" for="services-toggler-3">Кредит</label>
+      <ul class="services__list">
+        <li class="services__item service service--1">
+          <h3 class="service__title">Доставка</h3>
+          <p class="service__descr">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </li>
+        <li class="services__item service service--3">
+          <h3 class="service__title">Кредит</h3>
+          <p class="service__descr">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>
+          условия кредита. Выгодные для нашего банка, разумеется.</p>
+        </li>
+        <li class="services__item service service--2">
+          <h3 class="service__title">Гарантия</h3>
+          <p class="service__descr">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
+          Товар, не дом, конечно же.</p>
+        </li>
+      </ul>
     </section>
     <section class="partners">
       <h2 class="visuallyhidden">Партнёры</h2>

@@ -614,7 +614,6 @@ a {
 }
 
 .slides-promo__link {
-  z-index: 1000000;
   width: 140px;
   margin-top: 42px;
 }
@@ -750,68 +749,72 @@ a {
   background-image: linear-gradient(transparent 100px, #e5e5e5 100px);
 }
 
-.services__cat {
+.services__label {
   position: absolute;
-  width: 277px;
-  padding: 0;
-}
-
-.services__cat--delivery {
-  top: 80px;
-}
-
-.services__cat--warranty {
-  top: 144px;
-}
-
-.services__cat--credit {
-  top: 209px;
-}
-
-.services__link {
   width: 144px;
   padding: 8px;
 }
 
-.services__link::after {
+.services__label--1 {
+  top: 80px;
+}
+
+.services__label--2 {
+  top: 144px;
+}
+
+.services__label--3 {
+  top: 209px;
+}
+
+.services__label::after {
   content: none;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -117px;
   width: 117px;
   height: 40px;
   background-color: #000000;
 }
 
-.services__link:active {
-  color: #f7e296;
-  background-color: #000000;
-}
-
-.services__link:active::after {
-  content: "";
-}
-
-.services__content:target + .services__cat .services__link,
-.services__link--delivery,
-.services__link--delivery:hover,
-.services__link--delivery:focus {
+.services__toggler:checked + .services__label {
   color: #f7e184;
   background-color: black;
   background-image: none;
   cursor: default;
 }
 
-.services__content:target + .services__cat .services__link::after,
-.services__link--delivery::after,
-.services__link--delivery:hover::after,
-.services__link--delivery:focus::after {
+.services__toggler:checked + .services__label::after {
   content: "";
 }
 
-.services__content {
+.services__label:active {
+  color: #f7e296;
+  background-color: #000000;
+}
+
+.services__label:active::after {
+  content: "";
+}
+
+.services__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.services__item {
+  position: fixed;
+  left: -10000px;
   margin: 0 0 0 277px;
   border-left: solid 7px #000000;
+}
+
+.services__toggler--1:checked ~ .services__list .service--1,
+.services__toggler--2:checked ~ .services__list .service--2,
+.services__toggler--3:checked ~ .services__list .service--3 {
+  position: static;
 }
 
 .service {
@@ -819,17 +822,17 @@ a {
   background-repeat: no-repeat;
 }
 
-.service--delivery {
+.service--1 {
   background-image: url("../img/icons/service-delivery.svg");
   background-position: right 66px top 85px;
 }
 
-.service--warranty {
+.service--2 {
   background-image: url("../img/icons/service-warranty.svg");
   background-position: right 46px top 61px;
 }
 
-.service--credit {
+.service--3 {
   background-image: url("../img/icons/service-credit.svg");
   background-position: right 70px top 61px;
 }
@@ -845,42 +848,6 @@ a {
 .service__descr {
   margin: 0;
   color: #464646;
-}
-
-.service--warranty,
-.service--credit,
-.service--warranty:target ~ .service--delivery,
-.service--credit:target ~ .service--delivery {
-  display: none;
-}
-
-.service:target {
-  display: block;
-}
-
-.service--warranty:target ~ .services__cat--delivery .services__link:not(:active),
-.service--credit:target ~ .services__cat--delivery .services__link:not(:active) {
-  color: #000000;
-  background-color: transparent;
-  background-image: linear-gradient(transparent 16px, #f4d361 16px, #f4d361 17px, #f0c52e 17px, #f0c52e 23px, #f4d361 23px, #f4d361 24px, transparent 24px);
-}
-
-.service--warranty:target ~ .services__cat--delivery .services__link:not(:active):hover,
-.service--warranty:target ~ .services__cat--delivery .services__link:not(:active):focus,
-.service--credit:target ~ .services__cat--delivery .services__link:not(:active):hover,
-.service--credit:target ~ .services__cat--delivery .services__link:not(:active):focus {
-  background-color: #f0c52e;
-  background-image: none;
-}
-
-.service--warranty:target ~ .services__cat--delivery .services__link:not(:active):active,
-.service--credit:target ~ .services__cat--delivery .services__link:not(:active):active {
-  color: #f7e296;
-}
-
-.service--warranty:target ~ .services__cat--delivery .services__link:not(:active)::after,
-.service--credit:target ~ .services__cat--delivery .services__link:not(:active)::after {
-  content: none;
 }
 
 .partners {
@@ -1291,6 +1258,7 @@ a {
 .filter {
   width: calc(50% - 252px);
   background-color: #eeeeee;
+  border-bottom: solid 4px #ffffff;
 }
 
 .filter__header {
