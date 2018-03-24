@@ -263,7 +263,7 @@ a {
 .options-menu__link--cart {
   background-image: url("../img/icons/cart.svg");
   background-repeat: no-repeat;
-  background-position: 3px 4px;
+  background-position: 4px 4px;
 }
 
 .options-menu__link--footer {
@@ -305,7 +305,7 @@ a {
 .options-menu__link--footer-profile::before {
   background-image: url("../img/icons/profile-footer.svg");
   background-repeat: no-repeat;
-  background-position: 0 4px;
+  background-position: 1px 4px;
 }
 
 .options-menu__link--footer-compare::before {
@@ -317,7 +317,7 @@ a {
 .options-menu__link--footer-cart::before {
   background-image: url("../img/icons/cart-footer.svg");
   background-repeat: no-repeat;
-  background-position: 4px 4px;
+  background-position: 5px 4px;
 }
 
 .options-menu__logout-link {
@@ -1864,6 +1864,23 @@ a {
 }
 
 .page-footer {
+  position: relative;
+  padding: 60px calc(50% - 580px) 43px;
+  color: #ffffff;
+  background-color: #464646;
+}
+
+.page-footer::before {
+  content: "";
+  position: absolute;
+  bottom: 79px;
+  left: calc(50% - 580px);
+  width: 80px;
+  height: 7px;
+  background-color: #ffc600;
+}
+
+.page-footer__group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1872,15 +1889,16 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 52px calc(50% - 580px) 38px;
-  color: #ffffff;
-  background-color: #464646;
+}
+
+.page-footer__group--options {
+  padding-left: 200px;
 }
 
 .page-footer__logo {
-  width: 600px;
-  margin-top: 13px;
-  line-height: 12px;
+  position: absolute;
+  top: 65px;
+  left: calc(50% - 581px);
 }
 
 .page-footer__options {
@@ -1889,7 +1907,6 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-top: 4px;
   margin-left: 0;
   line-height: 36px;
 }
@@ -1916,13 +1933,13 @@ a {
 }
 
 .page-footer__socials {
-  width: 1000px;
-  margin-left: 80px;
+  margin: 0 120px;
 }
 
 .page-footer__dev {
-  margin-left: auto;
-  margin-top: 8px;
+  position: absolute;
+  right: calc(50% - 580px);
+  bottom: 58px;
 }
 
 .services-footer {
@@ -1939,7 +1956,7 @@ a {
 }
 
 .services-footer__item {
-  margin: 35px 17px;
+  margin: 40px 17px;
   font-weight: 800;
   font-size: 18px;
   line-height: 24px;
@@ -1971,18 +1988,8 @@ a {
   justify-content: center;
 }
 
-.socials::before {
-  content: "";
-  position: absolute;
-  top: 42px;
-  left: -80px;
-  width: 80px;
-  height: 7px;
-  background-color: #ffc600;
-}
-
 .socials__item {
-  margin: 29px 11px;
+  margin: 24px 11px;
 }
 
 .socials__link {
@@ -2014,10 +2021,6 @@ a {
 
 .socials__link:active {
   opacity: 0.1;
-}
-
-.dev {
-  margin-top: 8px;
 }
 
 .dev:hover,
