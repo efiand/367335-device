@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-  <header class="page-header page-header--catalog" id="menu-cat">
+  <header class="page-header page-header--catalog">
     <a class="page-header__logo logo" href="index.html">
       <img class="logo__img" src="img/logo.svg" width="164" height="36" alt="Логотип Device">
     </a>
@@ -39,8 +39,8 @@
       <ul class="nav__list">
         <li class="nav__item nav__item--catalog">
           <a href="#" class="nav__link">Каталог товаров</a>
-          <a class="nav__spoiler-btn nav__spoiler-btn--on" href="#menu-cat">Показать категории</a>
-          <a class="nav__spoiler-btn nav__spoiler-btn--off" href="#">Скрыть категории</a>
+          <button class="nav__spoiler-btn nav__spoiler-btn--on" type="button" disabled>Показать категории</button>
+          <button class="nav__spoiler-btn nav__spoiler-btn--off" type="button">Скрыть категории</button>
           <div class="categories-cat">
             <ul class="categories-cat__list">
               <li class="categories-cat__item">
