@@ -26,7 +26,7 @@
   src: local("Gilroy-ExtraBold"), local("Gilroy ExtraBold"), url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
 }
 
-.visuallyhidden:not(:focus):not(:active),
+.visuallyhidden:not(:focus),
 input[type="checkbox"].visuallyhidden,
 input[type="radio"].visuallyhidden {
   position: absolute;
@@ -133,6 +133,7 @@ a {
 
 .search__field {
   width: 355px;
+  min-height: 49px;
   padding: 8px 20px 7px 40px;
   font: inherit;
   background-color: transparent;
@@ -141,9 +142,6 @@ a {
   background-position: 3px 16px;
   border: none;
   outline: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
   border-top: solid 2px transparent;
   border-bottom: solid 2px transparent;
 }
@@ -186,6 +184,16 @@ a {
 .search__field:hover::placeholder,
 .search__field:focus::placeholder {
   color: rgba(0, 0, 0, 0.6);
+}
+
+.search__field::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search__field::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
 }
 
 .search__btn {
@@ -1366,6 +1374,7 @@ a {
 }
 
 .choose-cost__field {
+  width: 39px;
   padding: 0;
   font: inherit;
   color: inherit;
@@ -1395,7 +1404,7 @@ a {
 
 .choose-color__param {
   position: relative;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 39px;
 }
 
 .choose-color__param::before {
@@ -1450,7 +1459,7 @@ a {
 
 .choose-bt__param {
   position: relative;
-  padding: 0 0 0 40px;
+  padding: 0 0 0 39px;
 }
 
 .choose-bt__param::before {
@@ -1643,25 +1652,8 @@ a {
 .offer__options {
   position: absolute;
   top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   width: 360px;
   min-height: 380px;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style: none;
 }
 
 .offer__img {
@@ -1703,6 +1695,14 @@ a {
   border-radius: 50%;
 }
 
+.options-offer {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
 .options-offer__link {
   position: relative;
   top: -10000px;
@@ -1710,7 +1710,7 @@ a {
 
 .options-offer__choose {
   left: 1px;
-  margin: 54px 15px 15px;
+  margin: 172px 15px 15px;
   padding-right: 36px;
   padding-left: 36px;
 }
