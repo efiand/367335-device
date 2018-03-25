@@ -252,7 +252,8 @@
         <a class="contacts__map-link" href="#">
           <img src="img/map-pic.png" width="560" height="222" alt="Адрес на карте: г. Москва, ул. Строителей, 15">
         </a>
-        <div class="map" id="map">
+        <div class="map">
+          <div class="map__canvas"></div>
           <button class="contacts__close contacts__close--map" type="button">Назад к тексту</button>
         </div>
         <a class="info__link info__link--feedback btn" href="#feedback">Напишите нам</a>
@@ -324,6 +325,8 @@
       <img class="dev__logo" src="img/logo-dev.svg" width="27" height="34" alt="Логотип HTML Academy">
     </a>
   </footer>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAiqOS_d_g8MM1qUC6pDuSy4fLCaXlln1Y&callback=initMap"
+    async defer></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

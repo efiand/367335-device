@@ -1067,13 +1067,12 @@ a {
 
 .map {
   position: fixed;
-  top: calc(50vh - 280px);
+  top: 24px;
   left: calc(50% - 480px);
   z-index: 1;
   display: none;
   width: 960px;
-  height: 510px;
-  margin: 0;
+  height: 559px;
   background-color: #ebe8e7;
   background-image: url("../img/map-popup.png");
   background-repeat: no-repeat;
@@ -1085,6 +1084,11 @@ a {
 
 .map--js {
   display: block;
+}
+
+.map__canvas {
+  width: 960px;
+  height: 559px;
 }
 
 .feedback {
