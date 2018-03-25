@@ -1177,8 +1177,8 @@ a {
   background-repeat: no-repeat;
   -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-animation: bounce 0.6s;
+  animation: bounce 0.6s;
 }
 
 .map--js {

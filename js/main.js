@@ -4,6 +4,7 @@ var mapContainer = document.querySelector('.map');
 if (mapContainer) {
   var mapOnBtn = document.querySelector('.contacts__map-link');
   var mapOffBtn = document.querySelector('.contacts__close--map');
+  var mapCanvas = document.getElementById('map');
 
   mapOnBtn.addEventListener('click', function(evt) {
     evt.preventDefault();
@@ -14,18 +15,32 @@ if (mapContainer) {
     mapContainer.classList.remove('map--js');
   });
 
+  mapCanvas.addEventListener('keydown', function(evt) {
+    if (evt.keyCode === 27) {
+      if (mapContainer.classList.contains('map--js')) {
+        mapContainer.classList.remove('map--js');
+      }
+    }
+  });
+
   /** Оживление карты */
-  function initMap() {
-    var map = new google.maps.Map(document.querySelector('.map__canvas'), {
-      center: {lat: 55.68703, lng: 37.52959},
+  ymaps.ready(init);
+  function init() {
+    var myMap = new ymaps.Map('map', {
+      center: [55.68703, 37.52959],
       zoom: 17,
-      disableDefaultUI: true
+      controls: []
     });
-    var marker = new google.maps.Marker({
-      position: {lat: 55.687, lng: 37.53022},
-      map: map,
-      icon: location.href.replace('location.hash', '').replace('#', '').replace('index.html', '') + 'img/icons/map-marker.svg'
-    });
+    myMap.geoObjects.add(new ymaps.Placemark([55.687, 37.53022], {
+      hintContent: 'улица Строителей, 15'
+    }, {
+      iconLayout: 'default#image',
+      iconImageHref: 'img/icons/map-marker.svg',
+      iconShadow: false,
+      iconImageSize: [142, 46],
+      iconImageOffset: [-71, -46]
+    }));
+    myMap.behaviors.disable('scrollZoom');
   }
 }
 
