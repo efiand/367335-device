@@ -24,11 +24,11 @@ if (mapContainer) {
     var marker = new google.maps.Marker({
       position: {lat: 55.687, lng: 37.53022},
       map: map,
-      icon: location.protocol + '//' + location.host + '/img/icons/map-marker.svg'
+      icon: location.href.replace('location.hash', '').replace('#', '').replace('index.html', '') + 'img/icons/map-marker.svg'
     });
   }
 }
-var image = location.protocol + '//' + location.host + '/img/icons/map-marker.svg';
+
 
 /** Форма обратной связи */
 var feedbackContainer = document.getElementById('feedback');
