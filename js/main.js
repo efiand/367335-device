@@ -48,6 +48,7 @@ if (feedbackContainer) {
   });
 }
 
+
 /** Фиксация выпадающего меню по кнопке */
 var menuOnBtn = document.querySelector('.nav__spoiler-btn--on');
 var menuOffBtn = document.querySelector('.nav__spoiler-btn--off');
@@ -78,3 +79,39 @@ menuOffBtn.addEventListener('click', function() {
     menuOffBtn.classList.remove('nav__spoiler-btn--off-js');
   }
 });
+
+
+/** Оживление слайдера */
+var minField = document.querySelector('.choose-cost__field--min');
+
+if (minField) {
+  var maxField = document.querySelector('.choose-cost__field--max');
+  var minPoint = document.querySelector('.choose-cost__point--min');
+  var maxPoint = document.querySelector('.choose-cost__point--max');
+  var range = document.querySelector('.choose-cost__range');
+
+  minField.addEventListener('change', function() {
+    rangeSlider(minField, minPoint);
+  });
+
+  maxField.addEventListener('change', function() {
+    rangeSlider(maxField, maxPoint);
+  });
+
+  function rangeSlider(field, point) {
+    var valueLeft = field.value / 44 - 5;
+    var valueLeftAlt = minPoint.style.left.replace('px', '');
+    if (field == minField) {
+      valueLeftAlt = maxPoint.style.left.replace('px', '');
+    }
+    point.style.left = valueLeft + 'px';
+    var leftRange = valueLeft;
+    var rightRange = valueLeftAlt;
+    if (valueLeft > valueLeftAlt) {
+      leftRange = valueLeftAlt;
+      rightRange = valueLeft;
+    }
+    range.style.left = leftRange + 'px';
+    range.style.right = (201 - rightRange) + 'px';
+  }
+}

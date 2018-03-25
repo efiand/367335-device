@@ -1333,8 +1333,8 @@ a {
 .choose-cost__range {
   position: absolute;
   top: 11px;
-  left: 4px;
-  width: 113px;
+  left: 0;
+  right: 84px;
   height: 2px;
   background-color: #91c92f;
 }
