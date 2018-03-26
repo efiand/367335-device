@@ -111,7 +111,6 @@ if (feedbackForm) {
     feedbackForm.classList.add('feedback--js');
     feedbackName.value = localStorage.getItem('name');
     feedbackMail.value = localStorage.getItem('email');
-    feedbackText.value = localStorage.getItem('text');
     if (!feedbackName.value) {
       feedbackName.focus();
     }
@@ -129,10 +128,8 @@ if (feedbackForm) {
     }
     feedbackName.value = feedbackName.value.trim();
 
-    var namePattern = /[А-Я]{1}[а-я]+ [А-Я]{1}[а-я]+/;
-    if (!namePattern.test(feedbackName.value)) {
+    if (!feedbackName.value) {
       feedbackName.classList.add('feedback__field--js');
-      feedbackName.value = '';
       feedbackName.focus();
     }
     else {
@@ -166,9 +163,6 @@ if (feedbackForm) {
       feedbackText.classList.add('feedback__field--js');
       feedbackText.value = '';
       feedbackText.focus();
-    }
-    else {
-      localStorage.setItem('text', feedbackText.value);
     }
   });
 

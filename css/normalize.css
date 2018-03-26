@@ -8,6 +8,7 @@
 html {
   line-height: 1.15;
   /* 1 */
+
   -webkit-text-size-adjust: 100%;
   /* 2 */
 }
@@ -26,8 +27,8 @@ body {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
-  font-size: 2em;
   margin: 0.67em 0;
+  font-size: 2em;
 }
 
 /* Grouping content
@@ -51,9 +52,9 @@ hr {
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 pre {
-  font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
+  font-family: monospace, monospace;
   /* 2 */
 }
 
@@ -71,12 +72,13 @@ a {
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: none;
   /* 1 */
   text-decoration: underline;
-  /* 2 */
-  -webkit-text-decoration: underline dotted;
   text-decoration: underline dotted;
+  border-bottom: none;
+  /* 2 */
+
+  -webkit-text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -95,9 +97,9 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
   /* 1 */
   font-size: 1em;
+  font-family: monospace, monospace;
   /* 2 */
 }
 
@@ -114,9 +116,9 @@ small {
  */
 sub,
 sup {
+  position: relative;
   font-size: 75%;
   line-height: 0;
-  position: relative;
   vertical-align: baseline;
 }
 
@@ -148,13 +150,14 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
   /* 1 */
+  margin: 0;
+  /* 1 */
+
   font-size: 100%;
   /* 1 */
   line-height: 1.15;
-  /* 1 */
-  margin: 0;
+  font-family: inherit;
   /* 2 */
 }
 
@@ -195,8 +198,8 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+  border-style: none;
 }
 
 /**
@@ -223,16 +226,17 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  /* 1 */
-  color: inherit;
   /* 2 */
   display: table;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   max-width: 100%;
   /* 1 */
   padding: 0;
+  /* 1 */
+
+  color: inherit;
   /* 3 */
   white-space: normal;
   /* 1 */
@@ -278,9 +282,9 @@ textarea {
  * 2. Correct the outline style in Safari.
  */
 [type="search"] {
-  -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
+  -webkit-appearance: textfield;
   /* 2 */
 }
 
@@ -296,9 +300,9 @@ textarea {
  * 2. Change font properties to `inherit` in Safari.
  */
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
   /* 1 */
   font: inherit;
+  -webkit-appearance: button;
   /* 2 */
 }
 
