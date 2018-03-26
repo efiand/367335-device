@@ -1908,6 +1908,28 @@ a {
   align-content: flex-start;
 }
 
+.offer--new::before {
+  content: "new";
+  position: absolute;
+  top: 29px;
+  right: 27px;
+  z-index: 1;
+
+  margin: 0;
+  padding: 17px 10px 15px 13px;
+
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Gilroy", "Verdana", sans-serif;
+  color: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  border: solid 2px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
 .offer__options {
   position: absolute;
   top: 0;
@@ -1938,26 +1960,6 @@ a {
   line-height: 24px;
   font-family: "Gilroy", "Verdana", sans-serif;
   color: #464646;
-}
-
-.offer__new-tag {
-  position: absolute;
-  top: 29px;
-  right: 27px;
-
-  margin: 0;
-  padding: 17px 10px 15px 13px;
-
-  font-weight: 800;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Gilroy", "Verdana", sans-serif;
-  color: rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-
-  border: solid 2px rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
 }
 
 .options-offer {
