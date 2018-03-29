@@ -8,9 +8,3 @@
 node_modules/
 npm-debug.*
 Thumbs.db
-src/
-.csscomb.json
-.stylelintrc
-gulpfile.js
-package.json
-package-lock.json
