@@ -13,9 +13,9 @@
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/efiand/367335-device/issues"
+    "url": "https://github.com/efiand/device/issues"
   },
-  "homepage": "https://github.com/efiand/367335-device#readme",
+  "homepage": "https://github.com/efiand/device#readme",
   "devDependencies": {
     "browser-sync": "^2.23.6",
     "graceful-fs": "^4.1.11",
