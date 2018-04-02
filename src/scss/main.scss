@@ -52,13 +52,14 @@ $trans: all 0.3s ease-in-out;
   background-position: #{$pos-x}px #{$pos-y}px;
 }
 
-@font-face { font-family: "Open Sans";
-font-style: normal;
-font-weight: 400;
-src:
-local("Open Sans"),
-url("../fonts/opensans.woff2") format("woff2"),
-url("../fonts/opensans.woff") format("woff");
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src:
+  local("Open Sans"),
+  url("../fonts/opensans.woff2") format("woff2"),
+  url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
