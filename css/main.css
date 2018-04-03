@@ -1,31 +1,31 @@
 @font-face {
+  font-style: normal;
   font-weight: 400;
   font-family: "Open Sans";
-  font-style: normal;
 
   src: local("Open Sans"), url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
 }
 
 @font-face {
+  font-style: normal;
   font-weight: 300;
   font-family: "Open Sans";
-  font-style: normal;
 
   src: local("Open Sans Light"), url("../fonts/opensanslight.woff2") format("woff2"), url("../fonts/opensanslight.woff") format("woff");
 }
 
 @font-face {
+  font-style: normal;
   font-weight: 300;
   font-family: "Gilroy";
-  font-style: normal;
 
   src: local("Gilroy-Light"), local("Gilroy Light"), url("../fonts/gilroylight.woff2") format("woff2"), url("../fonts/gilroylight.woff") format("woff");
 }
 
 @font-face {
+  font-style: normal;
   font-weight: 800;
   font-family: "Gilroy";
-  font-style: normal;
 
   src: local("Gilroy-ExtraBold"), local("Gilroy ExtraBold"), url("../fonts/gilroyextrabold.woff2") format("woff2"), url("../fonts/gilroyextrabold.woff") format("woff");
 }
@@ -408,6 +408,7 @@ a {
 
 .options-menu__link--footer::before {
   content: "";
+
   position: absolute;
   top: 0;
   left: 0;
@@ -547,6 +548,7 @@ a {
 .nav__spoiler-btn::before,
 .nav__spoiler-btn::after {
   content: "";
+
   position: absolute;
   top: 0;
   left: 7px;
@@ -712,6 +714,7 @@ a {
 
 .slides-promo__item::before {
   content: "0" counter(item);
+
   position: absolute;
   top: 20px;
   right: 48px;
@@ -770,6 +773,7 @@ a {
 
 .slides-promo__lead::before {
   content: "";
+
   position: absolute;
   top: 13px;
 
@@ -863,6 +867,7 @@ a {
 
 .categories__link::before {
   content: "";
+
   position: absolute;
   top: 0;
   left: 0;
@@ -950,6 +955,7 @@ a {
 
 .services__label::after {
   content: none;
+
   position: absolute;
   top: 0;
   right: -117px;
@@ -1069,6 +1075,7 @@ a {
 
 .partners__link::after {
   content: "";
+
   position: absolute;
   top: -84px;
   left: 0;
@@ -1132,6 +1139,7 @@ a {
 
 .info__title::before {
   content: "";
+
   position: absolute;
   top: 0;
 
@@ -1179,6 +1187,7 @@ a {
 
 .partners-about__item::before {
   content: "";
+
   position: absolute;
   top: 16px;
   left: 1px;
@@ -1236,6 +1245,7 @@ a {
 .contacts__close::before,
 .contacts__close::after {
   content: "";
+
   position: absolute;
   top: 26px;
   left: 12px;
@@ -1356,10 +1366,13 @@ a {
   background-color: #f2f2f2;
   border: none;
   outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .feedback__field--textarea {
   min-height: 156px;
+  overflow: auto;
 
   resize: none;
 }
@@ -1659,6 +1672,7 @@ a {
 
 .choose-color__param::before {
   content: "";
+
   position: absolute;
   top: -2px;
   left: -1px;
@@ -1717,6 +1731,7 @@ a {
 
 .choose-bt__param::before {
   content: "";
+
   position: absolute;
   top: -4px;
   left: -1px;
@@ -1921,6 +1936,7 @@ a {
 
 .offer--new::before {
   content: "new";
+
   position: absolute;
   top: 29px;
   right: 27px;
@@ -2115,6 +2131,7 @@ a {
 
 .page-footer::before {
   content: "";
+
   position: absolute;
   bottom: 79px;
   left: calc(50% - 580px);

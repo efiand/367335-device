@@ -96,92 +96,88 @@ searchForm.addEventListener('submit', function(evt) {
 });
 
 
-/** Прогрессивное улучшение формы обратной связи */
-var feedbackForm = document.getElementById('feedback');
+/** Прогрессивное улучшение формы обратной связи (глючит в MS Edge и MSIE) */
+if (!document.documentMode && !/Edge/.test(navigator.userAgent)) {
+  var feedbackForm = document.getElementById('feedback');
 
-if (feedbackForm) {
-  var feedbackOnBtn = document.querySelector('.info__link--feedback');
-  var feedbackOffBtn = document.querySelector('.contacts__close--feedback');
-  var feedbackName = document.getElementById('name');
-  var feedbackMail = document.getElementById('email');
-  var feedbackText = document.getElementById('text');
+  if (feedbackForm) {
+    var feedbackOnBtn = document.querySelector('.info__link--feedback');
+    var feedbackOffBtn = document.querySelector('.contacts__close--feedback');
+    var feedbackName = document.getElementById('name');
+    var feedbackMail = document.getElementById('email');
+    var feedbackText = document.getElementById('text');
 
-  feedbackOnBtn.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    feedbackForm.classList.add('feedback--js');
-    feedbackName.value = localStorage.getItem('name');
-    feedbackMail.value = localStorage.getItem('email');
-    if (!feedbackName.value) {
-      feedbackName.focus();
-    }
-    else if (!feedbackMail.value) {
-      feedbackMail.focus();
-    }
-    else {
-      feedbackText.focus();
-    }
-  });
-
-  feedbackName.addEventListener('blur', function(evt) {
-    if (feedbackName.classList.contains('feedback__field--js')) {
-      feedbackName.classList.remove('feedback__field--js');
-    }
-    feedbackName.value = feedbackName.value.trim();
-
-    if (!feedbackName.value) {
-      feedbackName.classList.add('feedback__field--js');
-      feedbackName.focus();
-    }
-    else {
-      localStorage.setItem('name', feedbackName.value);
-    }
-  });
-
-  feedbackMail.addEventListener('blur', function(evt) {
-    if (feedbackMail.classList.contains('feedback__field--js')) {
-      feedbackMail.classList.remove('feedback__field--js');
-    }
-    feedbackMail.value = feedbackMail.value.trim();
-
-    var mailPattern = /.+@.+\..+/i;
-    if (!mailPattern.test(feedbackMail.value)) {
-      feedbackMail.classList.add('feedback__field--js');
-      feedbackMail.value = '';
-      feedbackMail.focus();
-    }
-    else {
-      localStorage.setItem('email', feedbackMail.value);
-    }
-  });
-
-  feedbackText.addEventListener('blur', function(evt) {
-    if (feedbackText.classList.contains('feedback__field--js')) {
-      feedbackText.classList.remove('feedback__field--js');
-    }
-    feedbackText.value = feedbackText.value.trim();
-    if (!feedbackText.value) {
-      feedbackText.classList.add('feedback__field--js');
-      feedbackText.value = '';
-      feedbackText.focus();
-    }
-  });
-
-  feedbackForm.addEventListener('submit', function(evt) {
-    evt.preventDefault();
-    feedbackForm.classList.remove('feedback--js')
-    feedbackForm.submit();
-  });
-
-  feedbackForm.addEventListener('keydown', function(evt) {
-    if (evt.keyCode === 27) {
-      if (feedbackForm.classList.contains('feedback--js')) {
-        feedbackForm.classList.remove('feedback--js');
+    feedbackOnBtn.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      feedbackForm.classList.add('feedback--js');
+      feedbackName.value = localStorage.getItem('name');
+      feedbackMail.value = localStorage.getItem('email');
+      if (!feedbackName.value) {
+        feedbackName.focus();
       }
-    }
-  });
+      else if (!feedbackMail.value) {
+        feedbackMail.focus();
+      }
+      else {
+        feedbackText.focus();
+      }
+    });
 
-  feedbackOffBtn.addEventListener('click', function(evt) {
-    evt.preventDefault();
-    feedbackForm.classList.remove('feedback--js');
-  });
+    feedbackName.addEventListener('blur', function(evt) {
+      if (feedbackName.classList.contains('feedback__field--js')) {
+        feedbackName.classList.remove('feedback__field--js');
+      }
+      feedbackName.value = feedbackName.value.trim();
+
+      if (!feedbackName.value) {
+        feedbackName.classList.add('feedback__field--js');
+        feedbackName.focus();
+      }
+      else {
+        localStorage.setItem('name', feedbackName.value);
+      }
+    });
+
+    feedbackMail.addEventListener('blur', function(evt) {
+      if (feedbackMail.classList.contains('feedback__field--js')) {
+        feedbackMail.classList.remove('feedback__field--js');
+      }
+      feedbackMail.value = feedbackMail.value.trim();
+
+      var mailPattern = /.+@.+\..+/i;
+      if (!mailPattern.test(feedbackMail.value)) {
+        feedbackMail.classList.add('feedback__field--js');
+        feedbackMail.value = '';
+        feedbackMail.focus();
+      }
+      else {
+        localStorage.setItem('email', feedbackMail.value);
+      }
+    });
+
+    feedbackText.addEventListener('blur', function(evt) {
+      if (feedbackText.classList.contains('feedback__field--js')) {
+        feedbackText.classList.remove('feedback__field--js');
+      }
+      feedbackText.value = feedbackText.value.trim();
+      if (!feedbackText.value) {
+        feedbackText.classList.add('feedback__field--js');
+        feedbackText.value = '';
+        feedbackText.focus();
+      }
+    });
+
+    feedbackForm.addEventListener('keydown', function(evt) {
+      if (evt.keyCode === 27) {
+        if (feedbackForm.classList.contains('feedback--js')) {
+          feedbackForm.classList.remove('feedback--js');
+        }
+      }
+    });
+
+    feedbackOffBtn.addEventListener('click', function(evt) {
+      evt.preventDefault();
+      feedbackForm.classList.remove('feedback--js');
+    });
+  }
 }
